@@ -7,11 +7,12 @@
         <option value="text">Text</option>
         <option value="url">URL</option>
         <option value="vcard">vCard</option>
+        <option value="wifi">WiFi</option>
       </select>
     </div>
 
-    <!-- Für Text/URL: altes Eingabefeld -->
-    <div v-if="inputType !== 'vcard'" class="field-group">
+    <!-- 1) Text / URL -->
+    <div v-if="inputType === 'text' || inputType === 'url'" class="field-group">
       <label for="inputValue">Wert eingeben:</label>
       <input
         id="inputValue"
@@ -22,8 +23,8 @@
       />
     </div>
 
-    <!-- vCard Felder werden angezeigt, sobald 'vcard' gewählt ist -->
-    <div v-else class="field-group vcard-fields">
+    <!-- 2) vCard Felder -->
+    <div v-else-if="inputType === 'vcard'" class="field-group vcard-fields">
       <!-- Name -->
       <div>
         <label for="firstName">Vorname</label>
@@ -166,24 +167,67 @@
         />
       </div>
     </div>
+
+    <!-- 3) WiFi Felder -->
+    <div v-else-if="inputType === 'wifi'" class="field-group wifi-fields">
+      <div>
+        <label for="networkName">Netzwerkname (SSID)</label>
+        <input
+          id="networkName"
+          type="text"
+          v-model="networkName"
+          @input="emitChanges"
+          placeholder="WLAN-SSID"
+        />
+      </div>
+
+      <div>
+        <label for="hidden">Versteckt</label>
+        <!-- Boolean-Check (true/false) -->
+        <input
+          id="hidden"
+          type="checkbox"
+          v-model="hidden"
+          @change="emitChanges"
+        />
+      </div>
+
+      <div>
+        <label for="wifiPassword">Passwort</label>
+        <input
+          id="wifiPassword"
+          type="text"
+          v-model="wifiPassword"
+          @input="emitChanges"
+          placeholder="WLAN-Passwort"
+        />
+      </div>
+
+      <div>
+        <label for="encryption">Verschlüsselung</label>
+        <select id="encryption" v-model="encryption" @change="emitChanges">
+          <option value="none">Keine</option>
+          <option value="WPA/WPA2">WPA/WPA2</option>
+          <option value="WEP">WEP</option>
+        </select>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, defineEmits } from "vue";
 
-/**
- * Erweitern wir den Type, damit "vcard" erlaubt ist
- */
+// Wir erweitern den Typ, sodass "wifi" ebenfalls unterstützt wird.
 const emit = defineEmits<{
   (event: "update:inputValue", value: string): void;
-  (event: "update:inputType", type: "text" | "url" | "vcard"): void;
+  (event: "update:inputType", type: "text" | "url" | "vcard" | "wifi"): void;
 }>();
 
-const inputValue = ref<string>("");
-const inputType = ref<"text" | "url" | "vcard">("text");
+const inputValue = ref("");
+const inputType = ref<"text" | "url" | "vcard" | "wifi">("text");
 
-/* Felder für die vCard */
+/** vCard-Felder */
 const firstName = ref("");
 const lastName = ref("");
 const mobile = ref("");
@@ -198,10 +242,14 @@ const state = ref("");
 const country = ref("");
 const website = ref("");
 
-/**
- * Baue den vCard-String (Version 3.0).
- * Für gängige Scanner sollte das genügen.
- */
+/** WiFi-Felder */
+const networkName = ref("");
+const hidden = ref(false);
+const wifiPassword = ref("");
+// "none", "WPA/WPA2", "WEP"
+const encryption = ref<"none" | "WPA/WPA2" | "WEP">("none");
+
+/** vCard-String zusammenbauen */
 function buildVcardString(): string {
   return `BEGIN:VCARD
 VERSION:3.0
@@ -217,15 +265,37 @@ URL:${website.value}
 END:VCARD`;
 }
 
-/**
- * emitChanges() wird getriggert, sobald irgendwo
- * Eingaben erfolgen. Ist der Typ 'vcard',
- * generieren wir die vCard, ansonsten direkt den Eingabe-String.
+/** WiFi-String zusammenbauen
+ *  Format (für WPA/WPA2 z.B.):
+ *  WIFI:T:WPA;S:MyNetwork;P:MyPass;H:true;;
  */
+function buildWifiString(): string {
+  // Verschlüsselung "none" => T: leer
+  // "WPA/WPA2" => T: WPA
+  // "WEP" => T: WEP
+  let type = "";
+  if (encryption.value === "WPA/WPA2") {
+    type = "WPA";
+  } else if (encryption.value === "WEP") {
+    type = "WEP";
+  }
+
+  // H: "true", wenn hidden
+  const hiddenFlag = hidden.value ? ";H:true" : "";
+  // Passwort nur dann, wenn es auch wirklich existiert
+  const pass = wifiPassword.value ? `;P:${wifiPassword.value}` : "";
+
+  return `WIFI:T:${type};S:${networkName.value}${pass}${hiddenFlag};;`;
+}
+
+/** emitChanges() wird getriggert, sobald ein Wert geändert wird */
 function emitChanges() {
   if (inputType.value === "vcard") {
     emit("update:inputValue", buildVcardString());
+  } else if (inputType.value === "wifi") {
+    emit("update:inputValue", buildWifiString());
   } else {
+    // "text" oder "url"
     emit("update:inputValue", inputValue.value);
   }
   emit("update:inputType", inputType.value);
@@ -246,6 +316,7 @@ export default defineComponent({});
   .field-group {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
   }
 
   label {
@@ -265,14 +336,24 @@ export default defineComponent({});
     border-color: #888;
   }
 
-  /* Für die vCard-Felder nutzen wir Grid-Layout, 
-     damit das Ganze halbwegs übersichtlich bleibt */
+  /* vCard-Felder: 2-spaltiges Layout */
   .vcard-fields {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
-    /* Innere Gruppen (divs) mit label/input */
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* WiFi-Felder: auch 2-spaltiges Layout, je nach Geschmack */
+  .wifi-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
     > div {
       display: flex;
       flex-direction: column;

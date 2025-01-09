@@ -21,13 +21,13 @@
 import { ref } from "vue";
 
 const inputValue = ref("");
-const inputType = ref<"text" | "url" | "vcard">("text");
+const inputType = ref<"text" | "url" | "vcard" | "wifi">("text");
 
 function onInputValueChange(val: string) {
   inputValue.value = val;
 }
 
-function onInputTypeChange(newType: "text" | "url" | "vcard") {
+function onInputTypeChange(newType: "text" | "url" | "vcard" | "wifi") {
   inputType.value = newType;
 }
 </script>
