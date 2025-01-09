@@ -15,7 +15,7 @@ import QRCode from "qrcode";
 
 const props = defineProps<{
   inputValue: string;
-  inputType: "text" | "url" | "vcard" | "wifi";
+  inputType: "text" | "url" | "vcard" | "wifi" | "email";
 }>();
 
 const qrCodeData = ref<string>("");

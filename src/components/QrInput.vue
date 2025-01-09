@@ -8,6 +8,7 @@
         <option value="url">URL</option>
         <option value="vcard">vCard</option>
         <option value="wifi">WiFi</option>
+        <option value="email">E-Mail</option>
       </select>
     </div>
 
@@ -25,7 +26,7 @@
 
     <!-- 2) vCard Felder -->
     <div v-else-if="inputType === 'vcard'" class="field-group vcard-fields">
-      <!-- Name -->
+      <!-- Vorname / Nachname -->
       <div>
         <label for="firstName">Vorname</label>
         <input
@@ -103,7 +104,7 @@
         />
       </div>
 
-      <!-- Adresse -->
+      <!-- Adresse: Straße, Stadt, PLZ, Bundesland, Land -->
       <div>
         <label for="street">Straße</label>
         <input
@@ -183,7 +184,6 @@
 
       <div>
         <label for="hidden">Versteckt</label>
-        <!-- Boolean-Check (true/false) -->
         <input
           id="hidden"
           type="checkbox"
@@ -212,20 +212,52 @@
         </select>
       </div>
     </div>
+
+    <!-- 4) E-Mail Felder -->
+    <div v-else-if="inputType === 'email'" class="field-group email-fields">
+      <label for="emailAddress">E-Mail-Adresse</label>
+      <input
+        id="emailAddress"
+        type="email"
+        v-model="emailAddress"
+        @input="emitChanges"
+        placeholder="beispiel@domain.de"
+      />
+
+      <label for="emailSubject">Betreff</label>
+      <input
+        id="emailSubject"
+        type="text"
+        v-model="emailSubject"
+        @input="emitChanges"
+        placeholder="Produkt-Anfrage"
+      />
+
+      <label for="emailBody">Nachricht</label>
+      <textarea
+        id="emailBody"
+        rows="5"
+        v-model="emailBody"
+        @input="emitChanges"
+        placeholder="Hallo, ich interessiere mich für..."
+      ></textarea>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, defineEmits } from "vue";
 
-// Wir erweitern den Typ, sodass "wifi" ebenfalls unterstützt wird.
+// Erweitere den Typ, damit wir alles abdecken
+type InputMode = "text" | "url" | "vcard" | "wifi" | "email";
+
 const emit = defineEmits<{
   (event: "update:inputValue", value: string): void;
-  (event: "update:inputType", type: "text" | "url" | "vcard" | "wifi"): void;
+  (event: "update:inputType", type: InputMode): void;
 }>();
 
 const inputValue = ref("");
-const inputType = ref<"text" | "url" | "vcard" | "wifi">("text");
+const inputType = ref<InputMode>("text");
 
 /** vCard-Felder */
 const firstName = ref("");
@@ -246,10 +278,17 @@ const website = ref("");
 const networkName = ref("");
 const hidden = ref(false);
 const wifiPassword = ref("");
-// "none", "WPA/WPA2", "WEP"
 const encryption = ref<"none" | "WPA/WPA2" | "WEP">("none");
 
-/** vCard-String zusammenbauen */
+/** E-Mail-Felder */
+const emailAddress = ref("");
+const emailSubject = ref("");
+const emailBody = ref("");
+
+/**
+ * 1) vCard-String zusammenbauen
+ *    Version 3.0, Felder aus der Liste.
+ */
 function buildVcardString(): string {
   return `BEGIN:VCARD
 VERSION:3.0
@@ -265,14 +304,10 @@ URL:${website.value}
 END:VCARD`;
 }
 
-/** WiFi-String zusammenbauen
- *  Format (für WPA/WPA2 z.B.):
- *  WIFI:T:WPA;S:MyNetwork;P:MyPass;H:true;;
+/**
+ * 2) WiFi-String (WIFI:T:<TYPE>;S:<SSID>;P:<PASS>;H:true;;)
  */
 function buildWifiString(): string {
-  // Verschlüsselung "none" => T: leer
-  // "WPA/WPA2" => T: WPA
-  // "WEP" => T: WEP
   let type = "";
   if (encryption.value === "WPA/WPA2") {
     type = "WPA";
@@ -280,24 +315,39 @@ function buildWifiString(): string {
     type = "WEP";
   }
 
-  // H: "true", wenn hidden
   const hiddenFlag = hidden.value ? ";H:true" : "";
-  // Passwort nur dann, wenn es auch wirklich existiert
   const pass = wifiPassword.value ? `;P:${wifiPassword.value}` : "";
 
   return `WIFI:T:${type};S:${networkName.value}${pass}${hiddenFlag};;`;
 }
 
-/** emitChanges() wird getriggert, sobald ein Wert geändert wird */
+/**
+ * 3) E-Mail (mailto:someone@example.com?subject=Betreff&body=Nachricht)
+ */
+function buildEmailString(): string {
+  const encSubject = encodeURIComponent(emailSubject.value);
+  const encBody = encodeURIComponent(emailBody.value);
+
+  return `mailto:${emailAddress.value}?subject=${encSubject}&body=${encBody}`;
+}
+
+/**
+ * 4) Hauptmethode, die immer aufgerufen wird,
+ *    sobald Eingaben erfolgen
+ */
 function emitChanges() {
   if (inputType.value === "vcard") {
     emit("update:inputValue", buildVcardString());
   } else if (inputType.value === "wifi") {
     emit("update:inputValue", buildWifiString());
+  } else if (inputType.value === "email") {
+    emit("update:inputValue", buildEmailString());
   } else {
     // "text" oder "url"
     emit("update:inputValue", inputValue.value);
   }
+
+  // Auch den Typ weitergeben
   emit("update:inputType", inputType.value);
 }
 </script>
@@ -325,14 +375,17 @@ export default defineComponent({});
   }
 
   input,
-  select {
+  select,
+  textarea {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize: vertical;
   }
 
   input:hover,
-  select:hover {
+  select:hover,
+  textarea:hover {
     border-color: #888;
   }
 
@@ -348,7 +401,7 @@ export default defineComponent({});
     }
   }
 
-  /* WiFi-Felder: auch 2-spaltiges Layout, je nach Geschmack */
+  /* WiFi-Felder: auch 2-spaltiges Layout */
   .wifi-fields {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -358,6 +411,12 @@ export default defineComponent({});
       display: flex;
       flex-direction: column;
     }
+  }
+
+  /* E-Mail-Felder: 1-spaltiges Layout */
+  .email-fields {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
