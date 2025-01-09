@@ -1,27 +1,70 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <h1>QR Code Generator</h1>
+  <h4>Welcome to the most simple QR Code Generator you can find</h4>
+  <p>Enter the text you want to convert to QR Code</p>
+  <div class="app-container">
+    <!-- Eingabekomponente -->
+    <QrInput
+      @update:inputValue="onInputValueChange"
+      @update:inputType="onInputTypeChange"
+    />
+
+    <!-- Vorschaukomponente -->
+    <QrPreview :inputValue="inputValue" :inputType="inputType" />
+
+    <!-- Downloadkomponente -->
+    <QrDownload :inputValue="inputValue" />
+  </div>
 </template>
+
+<script lang="ts" setup>
+import { ref } from "vue";
+
+// Reactive Variablen für den Text/URL-Wert und den Typ
+const inputValue = ref("");
+const inputType = ref<"text" | "url">("text");
+
+// Methoden, die von QrInput getriggert werden:
+function onInputValueChange(val: string) {
+  inputValue.value = val;
+}
+
+function onInputTypeChange(newType: "text" | "url") {
+  inputType.value = newType;
+}
+</script>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import QrInput from "./components/QrInput.vue";
+import QrPreview from "./components/QrPreview.vue";
+import QrDownload from "./components/QrDownload.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    QrInput,
+    QrPreview,
+    QrDownload,
   },
 });
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  /* Einfaches zentrieren und minimaler Style */
+  & > * {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #fafafa;
+  }
 }
 </style>
