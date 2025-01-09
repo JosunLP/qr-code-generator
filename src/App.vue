@@ -22,6 +22,11 @@
     <!-- Downloadkomponente -->
     <QrDownload :inputValue="inputValue" />
   </div>
+  <footer>
+    <a href="https://github.com/JosunLP/qr-code-generator" target="_blank"
+      >GitHub</a
+    >
+  </footer>
 </template>
 
 <script lang="ts" setup>
@@ -104,6 +109,22 @@ p {
 .switch {
   margin: 0 auto;
   display: block;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #777;
+
+  a {
+    color: #777;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: #333;
+    }
+  }
 }
 
 /* Container-Styling */
