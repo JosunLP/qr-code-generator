@@ -46,17 +46,6 @@ function downloadFile(url: string, filename: string) {
   document.body.removeChild(link);
 }
 
-// Hier legen wir mögliche MIME-Typen fest.
-// Achtung: GIF, TIFF und WebP werden evtl. nicht überall
-// problemlos funktionieren, da "qrcode" das nicht offiziell unterstützt.
-const mimeTypes: Record<Exclude<FormatType, "svg">, string> = {
-  png: "image/png",
-  jpeg: "image/jpeg",
-  gif: "image/gif",
-  tiff: "image/tiff",
-  webp: "image/webp",
-};
-
 async function handleDownload() {
   const input = props.inputValue.trim();
   if (!input) {
