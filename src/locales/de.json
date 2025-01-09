@@ -39,7 +39,6 @@
 		},
 		"email": {
 			"adress": "E-Mail-Adresse",
-			"adressPlaceholder": "dummy@domain.de",
 			"subject": "Betreff",
 			"subjectPlaceholder": "Betreff (optional)",
 			"body": "Nachricht",

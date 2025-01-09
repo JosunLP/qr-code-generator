@@ -223,7 +223,7 @@
         type="email"
         v-model="emailAddress"
         @input="emitChanges"
-        :placeholder="t('input.email.adressPlaceholder')"
+        placeholder="dummy@domain.info"
       />
 
       <label for="emailSubject">{{ t("input.email.subject") }}</label>
