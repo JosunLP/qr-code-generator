@@ -1,4 +1,4 @@
-# qr-code-generator
+# QRify
 
 ## Project setup
 ```

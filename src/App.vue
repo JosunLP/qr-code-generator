@@ -1,5 +1,6 @@
 <template>
-  <h1>QR Code Generator</h1>
+  <img alt="logo" class="logo" src="./assets/logo.png" />
+  <h1>QRify</h1>
   <h4>
     Welcome to the most simple QR Code Generator you can find
     <!-- Tooltip-Icon -->
@@ -90,6 +91,14 @@ p {
   font-size: 1rem;
   margin-bottom: 2rem;
   color: #666;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  margin-top: 2rem;
 }
 
 /* Container-Styling */
