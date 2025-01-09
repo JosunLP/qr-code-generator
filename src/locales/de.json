@@ -1,0 +1,57 @@
+{
+	"appTitle": "QRify",
+	"welcomeMessage": "Willkommen beim einfachsten QR-Code-Generator, den du finden kannst",
+	"enterText": "Gib den Text ein, den du in einen QR-Code umwandeln möchtest.",
+	"tooltip": "Kein Tracking. Kein Login oder Abo. Wir speichern oder verarbeiten keinerlei Daten.",
+	"input": {
+		"textUrl": {
+			"inputType": "Eingabetyp",
+			"value": "Wert eingeben",
+			"placeholder": "Gib einen Text oder eine URL ein..."
+		},
+		"placeholder": "Gib etwas ein...",
+		"vcard": {
+			"firstName": "Vorname",
+			"lastName": "Nachname",
+			"mobile": "Mobil",
+			"phone": "Telefon",
+			"fax": "Fax",
+			"email": "E-Mail",
+			"company": "Firma",
+			"website": "Webseite",
+			"street": "Straße",
+			"city": "Stadt",
+			"state": "Bundesland",
+			"zip": "PLZ",
+			"country": "Land"
+		},
+		"wifi": {
+			"ssid": "SSID",
+			"hidden": "Versteckt",
+			"password": "Passwort",
+			"passwordPlaceholder": "Passwort (optional)",
+			"security": "Sicherheit",
+			"securityType": {
+				"none": "Keine",
+				"wep": "WEP",
+				"wpa": "WPA/WPA2"
+			}
+		},
+		"email": {
+			"adress": "E-Mail-Adresse",
+			"adressPlaceholder": "dummy@domain.de",
+			"subject": "Betreff",
+			"subjectPlaceholder": "Betreff (optional)",
+			"body": "Nachricht",
+			"bodyPlaceholder": "Hallo, mein Name ist..."
+		}
+	},
+	"preview": {
+		"dummyText": "Dein QR-Code erscheint hier, sobald du Text oder eine URL eingibst."
+	},
+	"download": {
+		"selectFormat": "Format auswählen",
+		"downloadButton": "QR-Code herunterladen",
+		"downloadFormat": "Wähle ein Format aus und klicke auf 'Herunterladen', um den QR-Code zu speichern."
+	}
+}

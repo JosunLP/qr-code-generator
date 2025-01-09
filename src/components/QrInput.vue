@@ -2,7 +2,7 @@
   <div class="qr-input-container">
     <!-- Auswahl, welcher Input-Typ -->
     <div class="field-group">
-      <label for="inputType">Input-Typ:</label>
+      <label for="inputType">{{ t("input.textUrl.inputType") }}:</label>
       <select id="inputType" v-model="inputType" @change="emitChanges">
         <option value="text">Text</option>
         <option value="url">URL</option>
@@ -14,13 +14,13 @@
 
     <!-- 1) Text / URL -->
     <div v-if="inputType === 'text' || inputType === 'url'" class="field-group">
-      <label for="inputValue">Wert eingeben:</label>
+      <label for="inputValue">{{ t("input.textUrl.value") }}:</label>
       <input
         id="inputValue"
         type="text"
         v-model="inputValue"
         @input="emitChanges"
-        placeholder="Gib hier deinen Text oder deine URL ein"
+        :placeholder="t('input.textUrl.placeholder')"
       />
     </div>
 
@@ -28,7 +28,7 @@
     <div v-else-if="inputType === 'vcard'" class="field-group vcard-fields">
       <!-- Vorname / Nachname -->
       <div>
-        <label for="firstName">Vorname</label>
+        <label for="firstName">{{ t("input.vcard.firstName") }}</label>
         <input
           id="firstName"
           type="text"
@@ -38,7 +38,7 @@
         />
       </div>
       <div>
-        <label for="lastName">Nachname</label>
+        <label for="lastName">{{ t("input.vcard.lastName") }}</label>
         <input
           id="lastName"
           type="text"
@@ -50,7 +50,7 @@
 
       <!-- Nummern -->
       <div>
-        <label for="mobile">Handynummer</label>
+        <label for="mobile">{{ t("input.vcard.mobile") }}</label>
         <input
           id="mobile"
           type="tel"
@@ -60,7 +60,7 @@
         />
       </div>
       <div>
-        <label for="phone">Telefon</label>
+        <label for="phone">{{ t("input.vcard.phone") }}</label>
         <input
           id="phone"
           type="tel"
@@ -70,7 +70,7 @@
         />
       </div>
       <div>
-        <label for="fax">Fax</label>
+        <label for="fax">{{ t("input.vcard.fax") }}</label>
         <input
           id="fax"
           type="tel"
@@ -82,7 +82,7 @@
 
       <!-- E-Mail -->
       <div>
-        <label for="email">E-Mail</label>
+        <label for="email">{{ t("input.vcard.email") }}</label>
         <input
           id="email"
           type="email"
@@ -94,7 +94,7 @@
 
       <!-- Unternehmen -->
       <div>
-        <label for="company">Unternehmen</label>
+        <label for="company">{{ t("input.vcard.company") }}</label>
         <input
           id="company"
           type="text"
@@ -106,7 +106,7 @@
 
       <!-- Adresse: Straße, Stadt, PLZ, Bundesland, Land -->
       <div>
-        <label for="street">Straße</label>
+        <label for="street">{{ t("input.vcard.street") }}</label>
         <input
           id="street"
           type="text"
@@ -116,7 +116,7 @@
         />
       </div>
       <div>
-        <label for="city">Stadt</label>
+        <label for="city">{{ t("input.vcard.city") }}</label>
         <input
           id="city"
           type="text"
@@ -126,7 +126,7 @@
         />
       </div>
       <div>
-        <label for="zipcode">Postleitzahl</label>
+        <label for="zipcode">{{ t("input.vcard.zip") }}</label>
         <input
           id="zipcode"
           type="text"
@@ -136,7 +136,7 @@
         />
       </div>
       <div>
-        <label for="state">Bundesland</label>
+        <label for="state">{{ t("input.vcard.state") }}</label>
         <input
           id="state"
           type="text"
@@ -146,7 +146,7 @@
         />
       </div>
       <div>
-        <label for="country">Land</label>
+        <label for="country">{{ t("input.vcard.country") }}</label>
         <input
           id="country"
           type="text"
@@ -158,7 +158,7 @@
 
       <!-- Webseite -->
       <div>
-        <label for="website">Webseite</label>
+        <label for="website">{{ t("input.vcard.website") }}</label>
         <input
           id="website"
           type="url"
@@ -172,7 +172,7 @@
     <!-- 3) WiFi Felder -->
     <div v-else-if="inputType === 'wifi'" class="field-group wifi-fields">
       <div>
-        <label for="networkName">Netzwerkname (SSID)</label>
+        <label for="networkName">{{ t("input.wifi.ssid") }}</label>
         <input
           id="networkName"
           type="text"
@@ -183,7 +183,7 @@
       </div>
 
       <div>
-        <label for="hidden">Versteckt</label>
+        <label for="hidden">{{ t("input.wifi.hidden") }}</label>
         <input
           id="hidden"
           type="checkbox"
@@ -193,53 +193,55 @@
       </div>
 
       <div>
-        <label for="wifiPassword">Passwort</label>
+        <label for="wifiPassword">{{ t("input.wifi.password") }}</label>
         <input
           id="wifiPassword"
           type="text"
           v-model="wifiPassword"
           @input="emitChanges"
-          placeholder="WLAN-Passwort"
+          :placeholder="t('input.wifi.passwordPlaceholder')"
         />
       </div>
 
       <div>
-        <label for="encryption">Verschlüsselung</label>
+        <label for="encryption">{{ t("input.wifi.security") }}</label>
         <select id="encryption" v-model="encryption" @change="emitChanges">
-          <option value="none">Keine</option>
-          <option value="WPA/WPA2">WPA/WPA2</option>
-          <option value="WEP">WEP</option>
+          <option value="none">{{ t("input.wifi.securityType.none") }}</option>
+          <option value="WPA/WPA2">
+            {{ t("input.wifi.securityType.wpa") }}
+          </option>
+          <option value="WEP">{{ t("input.wifi.securityType.wep") }}</option>
         </select>
       </div>
     </div>
 
     <!-- 4) E-Mail Felder -->
     <div v-else-if="inputType === 'email'" class="field-group email-fields">
-      <label for="emailAddress">E-Mail-Adresse</label>
+      <label for="emailAddress">{{ t("input.email.adress") }}</label>
       <input
         id="emailAddress"
         type="email"
         v-model="emailAddress"
         @input="emitChanges"
-        placeholder="beispiel@domain.de"
+        :placeholder="t('input.email.adressPlaceholder')"
       />
 
-      <label for="emailSubject">Betreff</label>
+      <label for="emailSubject">{{ t("input.email.subject") }}</label>
       <input
         id="emailSubject"
         type="text"
         v-model="emailSubject"
         @input="emitChanges"
-        placeholder="Produkt-Anfrage"
+        :placeholder="t('input.email.subjectPlaceholder')"
       />
 
-      <label for="emailBody">Nachricht</label>
+      <label for="emailBody">{{ t("input.email.body") }}</label>
       <textarea
         id="emailBody"
         rows="5"
         v-model="emailBody"
         @input="emitChanges"
-        placeholder="Hallo, ich interessiere mich für..."
+        :placeholder="t('input.email.bodyPlaceholder')"
       ></textarea>
     </div>
   </div>
@@ -247,6 +249,9 @@
 
 <script lang="ts" setup>
 import { ref, defineEmits } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 // Erweitere den Typ, damit wir alles abdecken
 type InputMode = "text" | "url" | "vcard" | "wifi" | "email";

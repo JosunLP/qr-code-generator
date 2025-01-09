@@ -1,0 +1,57 @@
+{
+	"appTitle": "QRify",
+	"welcomeMessage": "Welcome to the most simple QR Code Generator you can find",
+	"enterText": "Enter the text you want to convert to a QR code.",
+	"tooltip": "No tracking. No login or subscription. We don't store or process any data.",
+	"input": {
+		"textUrl": {
+			"inputType": "Input Type",
+			"value": "Enter value",
+			"placeholder": "Type a text or an URL..."
+		},
+		"placeholder": "Type something...",
+		"vcard": {
+			"firstName": "First Name",
+			"lastName": "Last Name",
+			"mobile": "Mobile",
+			"phone": "Phone",
+			"fax": "Fax",
+			"email": "Email",
+			"company": "Company",
+			"website": "Website",
+			"street": "Street",
+			"city": "City",
+			"state": "State",
+			"zip": "Zip",
+			"country": "Country"
+		},
+		"wifi": {
+			"ssid": "SSID",
+			"hidden": "Hidden",
+			"password": "Password",
+			"passwordPlaceholder": "Password (optional)",
+			"security": "Security",
+			"securityType": {
+				"none": "None",
+				"wep": "WEP",
+				"wpa": "WPA/WPA2"
+			}
+		},
+		"email": {
+			"adress": "Email Adress",
+			"adressPlaceholder": "dummy@domain.com",
+			"subject": "Subject",
+			"subjectPlaceholder": "Subject (optional)",
+			"body": "Body",
+			"bodyPlaceholder": "Hello, my name is..."
+		}
+	},
+	"preview": {
+		"dummyText": "Your QR code will appear here as soon as you enter text or a URL."
+	},
+	"download": {
+		"selectFormat": "Select the Format",
+		"downloadButton": "Download QR Code",
+		"downloadFormat": "Select a format and click 'Download' to download the QR code."
+	}
+}

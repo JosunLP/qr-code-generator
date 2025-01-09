@@ -1,17 +1,18 @@
 <template>
   <div class="qr-download-container">
     <div class="download-controls">
-      <label for="formatSelect">Wähle das Format:</label>
+      <label for="formatSelect">{{ t("download.selectFormat") }}:</label>
       <select id="formatSelect" v-model="selectedFormat">
         <option v-for="fmt in formats" :key="fmt" :value="fmt">
           {{ fmt.toUpperCase() }}
         </option>
       </select>
-      <button @click="handleDownload">Download</button>
+      <button @click="handleDownload">
+        {{ t("download.downloadButton") }}
+      </button>
     </div>
     <p class="hint">
-      Wähle ein Format aus und klicke auf "Download", um den QR-Code
-      herunterzuladen.
+      {{ t("download.downloadFormat") }}
     </p>
   </div>
 </template>
@@ -19,6 +20,9 @@
 <script lang="ts" setup>
 import { defineProps, ref } from "vue";
 import QRCode from "qrcode";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const props = defineProps<{
   inputValue: string;

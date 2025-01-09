@@ -1,17 +1,13 @@
 <template>
   <img alt="logo" class="logo" src="./assets/logo.png" />
-  <h1>QRify</h1>
+  <h1>{{ t("appTitle") }}</h1>
   <h4>
-    Welcome to the most simple QR Code Generator you can find
+    {{ t("welcomeMessage") }}
     <!-- Tooltip-Icon -->
-    <span
-      class="tooltip-icon"
-      data-tooltip="No tracking. No login or subscription. We don't store or process any data."
-    >
-      ?
-    </span>
+    <span class="tooltip-icon" :data-tooltip="t('tooltip')"> ? </span>
   </h4>
-  <p>Enter the text you want to convert to a QR code.</p>
+  <LocalSwitch class="switch" />
+  <p>{{ t("enterText") }}</p>
 
   <div class="app-container">
     <!-- Eingabekomponente -->
@@ -30,7 +26,9 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
 const inputValue = ref("");
 const inputType = ref<"text" | "url" | "vcard" | "wifi" | "email">("text");
 
@@ -50,6 +48,7 @@ import { defineComponent } from "vue";
 import QrInput from "./components/QrInput.vue";
 import QrPreview from "./components/QrPreview.vue";
 import QrDownload from "./components/QrDownload.vue";
+import LocalSwitch from "./components/LocalSwitch.vue";
 
 export default defineComponent({
   name: "App",
@@ -57,6 +56,7 @@ export default defineComponent({
     QrInput,
     QrPreview,
     QrDownload,
+    LocalSwitch,
   },
 });
 </script>
@@ -99,6 +99,11 @@ p {
   width: 100px;
   height: 100px;
   margin-top: 2rem;
+}
+
+.switch {
+  margin: 0 auto;
+  display: block;
 }
 
 /* Container-Styling */

@@ -4,7 +4,7 @@
       <img :src="qrCodeData" alt="QR Code Preview" />
     </div>
     <div v-else class="placeholder">
-      <p>Dein QR Code erscheint hier, sobald du Text oder eine URL eingibst.</p>
+      <p>{{ t("preview.dummyText") }}</p>
     </div>
   </div>
 </template>
@@ -12,6 +12,9 @@
 <script lang="ts" setup>
 import { defineProps, ref, watch } from "vue";
 import QRCode from "qrcode";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const props = defineProps<{
   inputValue: string;
