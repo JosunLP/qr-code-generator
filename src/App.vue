@@ -20,11 +20,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-// Reactive Variablen für den Text/URL-Wert und den Typ
 const inputValue = ref("");
 const inputType = ref<"text" | "url">("text");
 
-// Methoden, die von QrInput getriggert werden:
 function onInputValueChange(val: string) {
   inputValue.value = val;
 }

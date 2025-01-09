@@ -20,15 +20,10 @@
 import { defineProps, ref } from "vue";
 import QRCode from "qrcode";
 
-// Die Elternkomponente übergibt uns den Eingabetext:
 const props = defineProps<{
   inputValue: string;
 }>();
 
-// Mögliche Ausgabeformate.
-// (Die Bibliothek `qrcode` unterstützt offiziell PNG und SVG.
-//  Für JPEG, GIF, TIFF, WebP kann es zu Einschränkungen kommen.
-//  Wir versuchen es dennoch über toDataURL mit passendem MIME-Typ.)
 const formats = ["svg", "png", "jpeg", "gif", "tiff", "webp"] as const;
 
 type FormatType = (typeof formats)[number]; // "svg" | "png" | "jpeg" | "gif" | "tiff" | "webp"
@@ -55,25 +50,18 @@ async function handleDownload() {
   }
 
   try {
-    // Wir unterscheiden zwischen 'svg' (toString) und allen anderen Formaten (toDataURL).
     if (selectedFormat.value === "svg") {
-      // 1) SVG erzeugen
       const svgString = await QRCode.toString(input, { type: "svg" });
-      // 2) Konvertierung zu einem Blob + Blob-URL (damit wir es herunterladen können)
       const blob = new Blob([svgString], { type: "image/svg+xml" });
       const blobUrl = URL.createObjectURL(blob);
       downloadFile(blobUrl, "qrcode.svg");
       URL.revokeObjectURL(blobUrl); // aufräumen
     } else {
-      // Für alle anderen Formate versuchen wir die toDataURL-Methode.
       const dataUrl = await QRCode.toDataURL(input, {
-        // Hier ggf. weitere Optionen wie errorCorrectionLevel, margin, width usw.
         errorCorrectionLevel: "H",
         margin: 2,
         width: 256,
       });
-      // Data-URL direkt herunterladen
-      // Wir erzeugen keinen Blob extra, da Data-URLs auch so geladen werden können.
       downloadFile(dataUrl, `qrcode.${selectedFormat.value}`);
     }
   } catch (err) {
@@ -88,7 +76,6 @@ async function handleDownload() {
 <script lang="ts">
 import { defineComponent } from "vue";
 
-// Hier definierst du einen "leeren" Default-Export
 export default defineComponent({});
 </script>
 
