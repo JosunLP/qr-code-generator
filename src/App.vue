@@ -21,13 +21,13 @@
 import { ref } from "vue";
 
 const inputValue = ref("");
-const inputType = ref<"text" | "url">("text");
+const inputType = ref<"text" | "url" | "vcard">("text");
 
 function onInputValueChange(val: string) {
   inputValue.value = val;
 }
 
-function onInputTypeChange(newType: "text" | "url") {
+function onInputTypeChange(newType: "text" | "url" | "vcard") {
   inputType.value = newType;
 }
 </script>
@@ -49,6 +49,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "./styles/main.scss";
+
 .app-container {
   display: flex;
   flex-direction: column;

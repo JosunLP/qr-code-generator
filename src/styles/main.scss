@@ -1,0 +1,206 @@
+$color-primary: #007bff;
+$color-success: #28a745;
+$color-danger: #dc3545;
+
+:root {
+  // CSS-Variablen generieren wir aus Sass:
+  --color-primary: #{$color-primary};
+  --color-success: #{$color-success};
+  // ...
+}
+
+/* -------------------------------------
+   1) CSS-Reset
+   ------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+fieldset,
+legend,
+hr,
+pre,
+textarea,
+button,
+input,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.4;
+  color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  background-color: #f6f6f6;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  line-height: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* -------------------------------------
+   2) Variablen
+   ------------------------------------- */
+
+:root {
+  /* Farben */
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+
+  /* Text / Hintergrund */
+  --color-text: #333;
+  --color-bg: #ffffff;
+
+  /* Abstände & Layout */
+  --spacing-base: 1rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --border-radius-base: 4px;
+
+  /* Schriftgrößen */
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+}
+
+/* -------------------------------------
+   3) Mixins
+   ------------------------------------- */
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button($bg-color: var(--color-primary), $text-color: #fff, $hover-color: var(--color-primary-hover)) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-base);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+/* -------------------------------------
+   4) Globale Utility-Klassen
+   ------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.mt-xs {
+  margin-top: var(--spacing-xs);
+}
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+/* -------------------------------------
+   5) Globale Typo
+   ------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+/* -------------------------------------
+   6) Weitere Styles oder Overrides
+   ------------------------------------- */
+
+.btn {
+  @include button();
+}
+
+.btn-success {
+  @include button($bg-color: var(--color-success));
+}
+
