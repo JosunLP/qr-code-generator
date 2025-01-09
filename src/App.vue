@@ -1,6 +1,15 @@
 <template>
   <h1>QR Code Generator</h1>
-  <h4>Welcome to the most simple QR Code Generator you can find</h4>
+  <h4>
+    Welcome to the most simple QR Code Generator you can find
+    <!-- Tooltip-Icon -->
+    <span
+      class="tooltip-icon"
+      data-tooltip="No tracking. No login or subscription. We don't store or process any data."
+    >
+      ?
+    </span>
+  </h4>
   <p>Enter the text you want to convert to a QR code.</p>
 
   <div class="app-container">
@@ -54,7 +63,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "./styles/main.scss";
 
-/* Grundlegende Heading-Styles */
+/* Heading-Styles */
 h1 {
   font-size: 2rem;
   text-align: center;
@@ -64,9 +73,16 @@ h1 {
 }
 
 h4 {
-  text-align: center;
   margin-bottom: 1rem;
   color: #555;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; // <-- zentriert den Inhalt
+
+  .tooltip-icon {
+    margin-left: 0.5rem;
+  }
 }
 
 p {
@@ -76,7 +92,7 @@ p {
   color: #666;
 }
 
-/* Container für unsere Input-, Preview- und Download-Komponenten */
+/* Container-Styling */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -88,13 +104,78 @@ p {
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 
-  /* Einheitliches Styling für die Kinder-Komponenten */
   & > * {
     border: 1px solid #eee;
     border-radius: 8px;
     padding: 1rem;
     background: #fafafa;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Tooltip-Icon */
+.tooltip-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #eee;
+  padding: 0 0.4rem;
+  border-radius: 50%;
+  line-height: 1.5;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
+
+  /* Tooltip-Text, der mit data-tooltip gesetzt wird */
+  &::after {
+    content: attr(data-tooltip);
+    /* Standardmäßig unsichtbar */
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 200px;
+
+    padding: 0.4rem 0.6rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    text-align: center;
+    white-space: normal;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  /* kleiner Pfeil unter dem Tooltip */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+    transform: translateX(-50%);
+    border: 0.4rem solid transparent;
+    border-top-color: #333;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  /* Zeigen, wenn man hovert */
+  &:hover::after,
+  &:hover::before {
+    visibility: visible;
+    opacity: 1;
   }
 }
 </style>
