@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Tervetuloa yksinkertaisimpaan QR-koodin luontityökaluun, jonka voit löytää",
+  "enterText": "Kirjoita teksti, jonka haluat muuttaa QR-koodiksi.",
+  "tooltip": "Ei seurantaa. Ei kirjautumista tai tilausta. Emme tallenna tai käsittele mitään tietoja.",
+  "input": {
+    "textUrl": {
+      "inputType": "Syötteen tyyppi",
+      "value": "Anna arvo",
+      "placeholder": "Kirjoita teksti tai URL..."
+    },
+    "placeholder": "Kirjoita jotakin...",
+    "types": {
+      "text": "Teksti",
+      "url": "URL",
+      "vcard": "Käyntikortti (vCard)",
+      "wifi": "WiFi",
+      "email": "Sähköposti"
+    },
+    "vcard": {
+      "firstName": "Etunimi",
+      "lastName": "Sukunimi",
+      "mobile": "Matkapuhelin",
+      "phone": "Puhelin",
+      "fax": "Faksi",
+      "email": "Sähköposti",
+      "company": "Yritys",
+      "website": "Verkkosivusto",
+      "street": "Katu",
+      "city": "Kaupunki",
+      "state": "Maakunta/Alue",
+      "zip": "Postinumero",
+      "country": "Maa",
+      "placeholders": {
+        "firstName": "Matti",
+        "lastName": "Meikäläinen",
+        "mobile": "+358 40 123 4567",
+        "phone": "+358 9 123 4567",
+        "fax": "+358 9 765 4321",
+        "email": "matti@example.com",
+        "company": "Esimerkki Oy",
+        "website": "https://www.esimerkki.fi",
+        "street": "Esimerkkikatu 1",
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "zip": "00100",
+        "country": "Suomi"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Piilotettu verkko",
+      "password": "Salasana",
+      "passwordPlaceholder": "Salasana (valinnainen)",
+      "security": "Tietoturva",
+      "securityType": {
+        "none": "Ei mitään",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Oma-WiFi-verkko"
+      }
+    },
+    "email": {
+      "adress": "Sähköpostiosoite",
+      "subject": "Aihe",
+      "subjectPlaceholder": "Aihe (valinnainen)",
+      "body": "Viestiteksti",
+      "bodyPlaceholder": "Hei, nimeni on...",
+      "placeholders": {
+        "address": "esimerkki@domain.fi"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR-koodin esikatselu",
+    "dummyText": "QR-koodisi näkyy tässä heti, kun syötät tekstin tai URL-osoitteen.",
+    "altText": "QR-koodin esikatselu"
+  },
+  "download": {
+    "selectFormat": "Valitse formaatti",
+    "downloadButton": "Lataa QR-koodi",
+    "downloadFormat": "Valitse formaatti ja napsauta 'Lataa' ladataksesi QR-koodin."
+  },
+  "language": {
+    "select": "Valitse kieli",
+    "en": "Englanti",
+    "de": "Saksa",
+    "fr": "Ranska",
+    "es": "Espanja",
+    "it": "Italia",
+    "pt": "Portugali",
+    "nl": "Hollanti",
+    "pl": "Puola",
+    "ru": "Venäjä",
+    "zh": "Kiina",
+    "ja": "Japani",
+    "ko": "Korea",
+    "sv": "Ruotsi",
+    "tr": "Turkki",
+    "ar": "Arabia",
+    "hi": "Hindi",
+    "cs": "Tšekki",
+    "el": "Kreikka",
+    "hu": "Unkari",
+    "ro": "Romania",
+    "uk": "Ukraina",
+    "vi": "Vietnam",
+    "th": "Thai",
+    "id": "Indonesia",
+    "da": "Tanska",
+    "no": "Norja",
+    "fi": "Suomi"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Näytä projekti GitHubissa"
+  }
+}

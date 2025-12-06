@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Chào mừng đến với trình tạo mã QR đơn giản nhất mà bạn có thể tìm thấy",
+  "enterText": "Nhập văn bản bạn muốn chuyển thành mã QR.",
+  "tooltip": "Không theo dõi. Không đăng nhập hay đăng ký. Chúng tôi không lưu trữ hoặc xử lý bất kỳ dữ liệu nào.",
+  "input": {
+    "textUrl": {
+      "inputType": "Loại nhập",
+      "value": "Nhập giá trị",
+      "placeholder": "Nhập văn bản hoặc URL..."
+    },
+    "placeholder": "Hãy nhập gì đó...",
+    "types": {
+      "text": "Văn bản",
+      "url": "URL",
+      "vcard": "Danh thiếp (vCard)",
+      "wifi": "WiFi",
+      "email": "Email"
+    },
+    "vcard": {
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "mobile": "Di động",
+      "phone": "Điện thoại",
+      "fax": "Fax",
+      "email": "Email",
+      "company": "Công ty",
+      "website": "Trang web",
+      "street": "Đường",
+      "city": "Thành phố",
+      "state": "Tỉnh/Bang",
+      "zip": "Mã bưu chính",
+      "country": "Quốc gia",
+      "placeholders": {
+        "firstName": "Minh",
+        "lastName": "Nguyễn",
+        "mobile": "+84 90 123 4567",
+        "phone": "+84 28 2345 6789",
+        "fax": "+84 28 8765 4321",
+        "email": "minh@example.com",
+        "company": "Công ty Ví dụ",
+        "website": "https://www.vidu.vn",
+        "street": "123 Lê Lợi",
+        "city": "Hồ Chí Minh",
+        "state": "Hồ Chí Minh",
+        "zip": "700000",
+        "country": "Việt Nam"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Mạng ẩn",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "Mật khẩu (tùy chọn)",
+      "security": "Bảo mật",
+      "securityType": {
+        "none": "Không có",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mang-WiFi-cua-toi"
+      }
+    },
+    "email": {
+      "adress": "Địa chỉ email",
+      "subject": "Chủ đề",
+      "subjectPlaceholder": "Chủ đề (tùy chọn)",
+      "body": "Nội dung",
+      "bodyPlaceholder": "Xin chào, tôi tên là...",
+      "placeholders": {
+        "address": "vidu@domain.com"
+      }
+    }
+  },
+  "preview": {
+    "title": "Xem trước mã QR",
+    "dummyText": "Mã QR của bạn sẽ xuất hiện ở đây ngay khi bạn nhập văn bản hoặc URL.",
+    "altText": "Xem trước mã QR"
+  },
+  "download": {
+    "selectFormat": "Chọn định dạng",
+    "downloadButton": "Tải mã QR",
+    "downloadFormat": "Chọn định dạng và nhấn 'Tải xuống' để tải mã QR."
+  },
+  "language": {
+    "select": "Chọn ngôn ngữ",
+    "en": "Tiếng Anh",
+    "de": "Tiếng Đức",
+    "fr": "Tiếng Pháp",
+    "es": "Tiếng Tây Ban Nha",
+    "it": "Tiếng Ý",
+    "pt": "Tiếng Bồ Đào Nha",
+    "nl": "Tiếng Hà Lan",
+    "pl": "Tiếng Ba Lan",
+    "ru": "Tiếng Nga",
+    "zh": "Tiếng Trung",
+    "ja": "Tiếng Nhật",
+    "ko": "Tiếng Hàn",
+    "sv": "Tiếng Thụy Điển",
+    "tr": "Tiếng Thổ Nhĩ Kỳ",
+    "ar": "Tiếng Ả Rập",
+    "hi": "Tiếng Hindi",
+    "cs": "Tiếng Séc",
+    "el": "Tiếng Hy Lạp",
+    "hu": "Tiếng Hungary",
+    "ro": "Tiếng Romania",
+    "uk": "Tiếng Ukraina",
+    "vi": "Tiếng Việt",
+    "th": "Tiếng Thái",
+    "id": "Tiếng Indonesia",
+    "da": "Tiếng Đan Mạch",
+    "no": "Tiếng Na Uy",
+    "fi": "Tiếng Phần Lan"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Xem dự án trên GitHub"
+  }
+}

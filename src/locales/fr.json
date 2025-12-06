@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Bienvenue sur le générateur de codes QR le plus simple que vous puissiez trouver",
+  "enterText": "Entrez le texte que vous souhaitez convertir en code QR.",
+  "tooltip": "Pas de suivi. Pas de connexion ni d'abonnement. Nous ne stockons ni ne traitons aucune donnée.",
+  "input": {
+    "textUrl": {
+      "inputType": "Type d'entrée",
+      "value": "Entrer la valeur",
+      "placeholder": "Tapez un texte ou une URL..."
+    },
+    "placeholder": "Tapez quelque chose...",
+    "types": {
+      "text": "Texte",
+      "url": "URL",
+      "vcard": "Carte de visite (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "mobile": "Mobile",
+      "phone": "Téléphone",
+      "fax": "Fax",
+      "email": "E-mail",
+      "company": "Entreprise",
+      "website": "Site web",
+      "street": "Rue",
+      "city": "Ville",
+      "state": "Région",
+      "zip": "Code postal",
+      "country": "Pays",
+      "placeholders": {
+        "firstName": "Jean",
+        "lastName": "Dupont",
+        "mobile": "+33 6 12 34 56 78",
+        "phone": "+33 1 23 45 67 89",
+        "fax": "+33 1 98 76 54 32",
+        "email": "jean@dupont.fr",
+        "company": "Dupont SARL",
+        "website": "https://www.dupont.fr",
+        "street": "123 Rue de Paris",
+        "city": "Paris",
+        "state": "Île-de-France",
+        "zip": "75001",
+        "country": "France"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Réseau caché",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Mot de passe (optionnel)",
+      "security": "Sécurité",
+      "securityType": {
+        "none": "Aucune",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mon-Réseau-WiFi"
+      }
+    },
+    "email": {
+      "adress": "Adresse e-mail",
+      "subject": "Objet",
+      "subjectPlaceholder": "Objet (optionnel)",
+      "body": "Message",
+      "bodyPlaceholder": "Bonjour, je m'appelle...",
+      "placeholders": {
+        "address": "exemple@domaine.fr"
+      }
+    }
+  },
+  "preview": {
+    "title": "Aperçu du code QR",
+    "dummyText": "Votre code QR apparaîtra ici dès que vous aurez saisi du texte ou une URL.",
+    "altText": "Aperçu du code QR"
+  },
+  "download": {
+    "selectFormat": "Sélectionner le format",
+    "downloadButton": "Télécharger le code QR",
+    "downloadFormat": "Sélectionnez un format et cliquez sur 'Télécharger' pour enregistrer le code QR."
+  },
+  "language": {
+    "select": "Sélectionner la langue",
+    "en": "Anglais",
+    "de": "Allemand",
+    "fr": "Français",
+    "es": "Espagnol",
+    "it": "Italien",
+    "pt": "Portugais",
+    "nl": "Néerlandais",
+    "pl": "Polonais",
+    "ru": "Russe",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "ko": "Coréen",
+    "sv": "Suédois",
+    "tr": "Turc",
+    "ar": "Arabe",
+    "hi": "Hindi",
+    "cs": "Tchèque",
+    "el": "Grec",
+    "hu": "Hongrois",
+    "ro": "Roumain",
+    "uk": "Ukrainien",
+    "vi": "Vietnamien",
+    "th": "Thaï",
+    "id": "Indonésien",
+    "da": "Danois",
+    "no": "Norvégien",
+    "fi": "Finnois"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Voir le projet sur GitHub"
+  }
+}

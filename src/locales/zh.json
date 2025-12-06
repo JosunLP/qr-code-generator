@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "欢迎使用最简单的二维码生成器",
+  "enterText": "输入您想要转换为二维码的文本。",
+  "tooltip": "无追踪。无需登录或订阅。我们不存储或处理任何数据。",
+  "input": {
+    "textUrl": {
+      "inputType": "输入类型",
+      "value": "输入值",
+      "placeholder": "输入文本或网址..."
+    },
+    "placeholder": "输入内容...",
+    "types": {
+      "text": "文本",
+      "url": "网址",
+      "vcard": "名片 (vCard)",
+      "wifi": "WiFi",
+      "email": "电子邮件"
+    },
+    "vcard": {
+      "firstName": "名",
+      "lastName": "姓",
+      "mobile": "手机",
+      "phone": "电话",
+      "fax": "传真",
+      "email": "电子邮件",
+      "company": "公司",
+      "website": "网站",
+      "street": "街道",
+      "city": "城市",
+      "state": "省份",
+      "zip": "邮编",
+      "country": "国家",
+      "placeholders": {
+        "firstName": "小明",
+        "lastName": "王",
+        "mobile": "+86 138 1234 5678",
+        "phone": "+86 10 1234 5678",
+        "fax": "+86 10 8765 4321",
+        "email": "xiaoming@wang.cn",
+        "company": "王氏科技有限公司",
+        "website": "https://www.wang.cn",
+        "street": "中关村大街123号",
+        "city": "北京",
+        "state": "北京市",
+        "zip": "100080",
+        "country": "中国"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "隐藏网络",
+      "password": "密码",
+      "passwordPlaceholder": "密码（可选）",
+      "security": "安全性",
+      "securityType": {
+        "none": "无",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "我的WiFi网络"
+      }
+    },
+    "email": {
+      "adress": "电子邮件地址",
+      "subject": "主题",
+      "subjectPlaceholder": "主题（可选）",
+      "body": "内容",
+      "bodyPlaceholder": "你好，我叫...",
+      "placeholders": {
+        "address": "example@domain.cn"
+      }
+    }
+  },
+  "preview": {
+    "title": "二维码预览",
+    "dummyText": "输入文本或网址后，您的二维码将显示在这里。",
+    "altText": "二维码预览"
+  },
+  "download": {
+    "selectFormat": "选择格式",
+    "downloadButton": "下载二维码",
+    "downloadFormat": "选择格式并点击「下载」保存二维码。"
+  },
+  "language": {
+    "select": "选择语言",
+    "en": "英语",
+    "de": "德语",
+    "fr": "法语",
+    "es": "西班牙语",
+    "it": "意大利语",
+    "pt": "葡萄牙语",
+    "nl": "荷兰语",
+    "pl": "波兰语",
+    "ru": "俄语",
+    "zh": "中文",
+    "ja": "日语",
+    "ko": "韩语",
+    "sv": "瑞典语",
+    "tr": "土耳其语",
+    "ar": "阿拉伯语",
+    "hi": "印地语",
+    "cs": "捷克语",
+    "el": "希腊语",
+    "hu": "匈牙利语",
+    "ro": "罗马尼亚语",
+    "uk": "乌克兰语",
+    "vi": "越南语",
+    "th": "泰语",
+    "id": "印度尼西亚语",
+    "da": "丹麦语",
+    "no": "挪威语",
+    "fi": "芬兰语"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "在 GitHub 上查看项目"
+  }
+}

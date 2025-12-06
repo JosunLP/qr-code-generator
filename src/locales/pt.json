@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Bem-vindo ao gerador de códigos QR mais simples que você pode encontrar",
+  "enterText": "Digite o texto que deseja converter em um código QR.",
+  "tooltip": "Sem rastreamento. Sem login ou assinatura. Não armazenamos nem processamos nenhum dado.",
+  "input": {
+    "textUrl": {
+      "inputType": "Tipo de entrada",
+      "value": "Inserir valor",
+      "placeholder": "Digite um texto ou uma URL..."
+    },
+    "placeholder": "Digite algo...",
+    "types": {
+      "text": "Texto",
+      "url": "URL",
+      "vcard": "Cartão de visita (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Nome",
+      "lastName": "Sobrenome",
+      "mobile": "Celular",
+      "phone": "Telefone",
+      "fax": "Fax",
+      "email": "E-mail",
+      "company": "Empresa",
+      "website": "Site",
+      "street": "Rua",
+      "city": "Cidade",
+      "state": "Estado",
+      "zip": "CEP",
+      "country": "País",
+      "placeholders": {
+        "firstName": "João",
+        "lastName": "Silva",
+        "mobile": "+55 11 91234 5678",
+        "phone": "+55 11 1234 5678",
+        "fax": "+55 11 9876 5432",
+        "email": "joao@silva.com.br",
+        "company": "Silva Ltda.",
+        "website": "https://www.silva.com.br",
+        "street": "Rua das Flores 123",
+        "city": "São Paulo",
+        "state": "SP",
+        "zip": "01310-100",
+        "country": "Brasil"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Rede oculta",
+      "password": "Senha",
+      "passwordPlaceholder": "Senha (opcional)",
+      "security": "Segurança",
+      "securityType": {
+        "none": "Nenhuma",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Minha-Rede-WiFi"
+      }
+    },
+    "email": {
+      "adress": "Endereço de e-mail",
+      "subject": "Assunto",
+      "subjectPlaceholder": "Assunto (opcional)",
+      "body": "Mensagem",
+      "bodyPlaceholder": "Olá, meu nome é...",
+      "placeholders": {
+        "address": "exemplo@dominio.com.br"
+      }
+    }
+  },
+  "preview": {
+    "title": "Visualização do código QR",
+    "dummyText": "Seu código QR aparecerá aqui assim que você inserir texto ou uma URL.",
+    "altText": "Visualização do código QR"
+  },
+  "download": {
+    "selectFormat": "Selecionar formato",
+    "downloadButton": "Baixar código QR",
+    "downloadFormat": "Selecione um formato e clique em 'Baixar' para salvar o código QR."
+  },
+  "language": {
+    "select": "Selecionar idioma",
+    "en": "Inglês",
+    "de": "Alemão",
+    "fr": "Francês",
+    "es": "Espanhol",
+    "it": "Italiano",
+    "pt": "Português",
+    "nl": "Holandês",
+    "pl": "Polonês",
+    "ru": "Russo",
+    "zh": "Chinês",
+    "ja": "Japonês",
+    "ko": "Coreano",
+    "sv": "Sueco",
+    "tr": "Turco",
+    "ar": "Árabe",
+    "hi": "Hindi",
+    "cs": "Tcheco",
+    "el": "Grego",
+    "hu": "Húngaro",
+    "ro": "Romeno",
+    "uk": "Ucraniano",
+    "vi": "Vietnamita",
+    "th": "Tailandês",
+    "id": "Indonésio",
+    "da": "Dinamarquês",
+    "no": "Norueguês",
+    "fi": "Finlandês"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Ver projeto no GitHub"
+  }
+}

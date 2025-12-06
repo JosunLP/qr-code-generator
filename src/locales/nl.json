@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Welkom bij de eenvoudigste QR-code generator die je kunt vinden",
+  "enterText": "Voer de tekst in die je wilt omzetten naar een QR-code.",
+  "tooltip": "Geen tracking. Geen login of abonnement. We slaan geen gegevens op en verwerken deze niet.",
+  "input": {
+    "textUrl": {
+      "inputType": "Invoertype",
+      "value": "Waarde invoeren",
+      "placeholder": "Typ een tekst of URL..."
+    },
+    "placeholder": "Typ iets...",
+    "types": {
+      "text": "Tekst",
+      "url": "URL",
+      "vcard": "Visitekaartje (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "mobile": "Mobiel",
+      "phone": "Telefoon",
+      "fax": "Fax",
+      "email": "E-mail",
+      "company": "Bedrijf",
+      "website": "Website",
+      "street": "Straat",
+      "city": "Stad",
+      "state": "Provincie",
+      "zip": "Postcode",
+      "country": "Land",
+      "placeholders": {
+        "firstName": "Jan",
+        "lastName": "de Vries",
+        "mobile": "+31 6 12345678",
+        "phone": "+31 20 1234567",
+        "fax": "+31 20 9876543",
+        "email": "jan@devries.nl",
+        "company": "De Vries B.V.",
+        "website": "https://www.devries.nl",
+        "street": "Hoofdstraat 123",
+        "city": "Amsterdam",
+        "state": "Noord-Holland",
+        "zip": "1012 AB",
+        "country": "Nederland"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Verborgen netwerk",
+      "password": "Wachtwoord",
+      "passwordPlaceholder": "Wachtwoord (optioneel)",
+      "security": "Beveiliging",
+      "securityType": {
+        "none": "Geen",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mijn-WiFi-Netwerk"
+      }
+    },
+    "email": {
+      "adress": "E-mailadres",
+      "subject": "Onderwerp",
+      "subjectPlaceholder": "Onderwerp (optioneel)",
+      "body": "Bericht",
+      "bodyPlaceholder": "Hallo, mijn naam is...",
+      "placeholders": {
+        "address": "voorbeeld@domein.nl"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR-code voorbeeld",
+    "dummyText": "Je QR-code verschijnt hier zodra je tekst of een URL invoert.",
+    "altText": "QR-code voorbeeld"
+  },
+  "download": {
+    "selectFormat": "Formaat selecteren",
+    "downloadButton": "QR-code downloaden",
+    "downloadFormat": "Selecteer een formaat en klik op 'Downloaden' om de QR-code op te slaan."
+  },
+  "language": {
+    "select": "Taal selecteren",
+    "en": "Engels",
+    "de": "Duits",
+    "fr": "Frans",
+    "es": "Spaans",
+    "it": "Italiaans",
+    "pt": "Portugees",
+    "nl": "Nederlands",
+    "pl": "Pools",
+    "ru": "Russisch",
+    "zh": "Chinees",
+    "ja": "Japans",
+    "ko": "Koreaans",
+    "sv": "Zweeds",
+    "tr": "Turks",
+    "ar": "Arabisch",
+    "hi": "Hindi",
+    "cs": "Tsjechisch",
+    "el": "Grieks",
+    "hu": "Hongaars",
+    "ro": "Roemeens",
+    "uk": "Oekraïens",
+    "vi": "Vietnamees",
+    "th": "Thais",
+    "id": "Indonesisch",
+    "da": "Deens",
+    "no": "Noors",
+    "fi": "Fins"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Bekijk project op GitHub"
+  }
+}

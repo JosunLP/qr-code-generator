@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Bienvenido al generador de códigos QR más simple que puedas encontrar",
+  "enterText": "Introduce el texto que quieres convertir en un código QR.",
+  "tooltip": "Sin seguimiento. Sin inicio de sesión ni suscripción. No almacenamos ni procesamos ningún dato.",
+  "input": {
+    "textUrl": {
+      "inputType": "Tipo de entrada",
+      "value": "Introducir valor",
+      "placeholder": "Escribe un texto o una URL..."
+    },
+    "placeholder": "Escribe algo...",
+    "types": {
+      "text": "Texto",
+      "url": "URL",
+      "vcard": "Tarjeta de visita (vCard)",
+      "wifi": "WiFi",
+      "email": "Correo electrónico"
+    },
+    "vcard": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "mobile": "Móvil",
+      "phone": "Teléfono",
+      "fax": "Fax",
+      "email": "Correo electrónico",
+      "company": "Empresa",
+      "website": "Sitio web",
+      "street": "Calle",
+      "city": "Ciudad",
+      "state": "Provincia",
+      "zip": "Código postal",
+      "country": "País",
+      "placeholders": {
+        "firstName": "Juan",
+        "lastName": "García",
+        "mobile": "+34 612 345 678",
+        "phone": "+34 91 123 45 67",
+        "fax": "+34 91 987 65 43",
+        "email": "juan@garcia.es",
+        "company": "García S.L.",
+        "website": "https://www.garcia.es",
+        "street": "Calle Mayor 123",
+        "city": "Madrid",
+        "state": "Madrid",
+        "zip": "28001",
+        "country": "España"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Red oculta",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Contraseña (opcional)",
+      "security": "Seguridad",
+      "securityType": {
+        "none": "Ninguna",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mi-Red-WiFi"
+      }
+    },
+    "email": {
+      "adress": "Dirección de correo",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Asunto (opcional)",
+      "body": "Mensaje",
+      "bodyPlaceholder": "Hola, me llamo...",
+      "placeholders": {
+        "address": "ejemplo@dominio.es"
+      }
+    }
+  },
+  "preview": {
+    "title": "Vista previa del código QR",
+    "dummyText": "Tu código QR aparecerá aquí cuando introduzcas texto o una URL.",
+    "altText": "Vista previa del código QR"
+  },
+  "download": {
+    "selectFormat": "Seleccionar formato",
+    "downloadButton": "Descargar código QR",
+    "downloadFormat": "Selecciona un formato y haz clic en 'Descargar' para guardar el código QR."
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "en": "Inglés",
+    "de": "Alemán",
+    "fr": "Francés",
+    "es": "Español",
+    "it": "Italiano",
+    "pt": "Portugués",
+    "nl": "Neerlandés",
+    "pl": "Polaco",
+    "ru": "Ruso",
+    "zh": "Chino",
+    "ja": "Japonés",
+    "ko": "Coreano",
+    "sv": "Sueco",
+    "tr": "Turco",
+    "ar": "Árabe",
+    "hi": "Hindi",
+    "cs": "Checo",
+    "el": "Griego",
+    "hu": "Húngaro",
+    "ro": "Rumano",
+    "uk": "Ucraniano",
+    "vi": "Vietnamita",
+    "th": "Tailandés",
+    "id": "Indonesio",
+    "da": "Danés",
+    "no": "Noruego",
+    "fi": "Finés"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Ver proyecto en GitHub"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Velkommen til den simpleste QR-kodegenerator, du kan finde",
+  "enterText": "Indtast den tekst, du vil konvertere til en QR-kode.",
+  "tooltip": "Ingen tracking. Ingen login eller abonnement. Vi gemmer eller behandler ingen data.",
+  "input": {
+    "textUrl": {
+      "inputType": "Inputtype",
+      "value": "Indtast værdi",
+      "placeholder": "Skriv en tekst eller en URL..."
+    },
+    "placeholder": "Skriv noget...",
+    "types": {
+      "text": "Tekst",
+      "url": "URL",
+      "vcard": "Visitkort (vCard)",
+      "wifi": "WiFi",
+      "email": "Email"
+    },
+    "vcard": {
+      "firstName": "Fornavn",
+      "lastName": "Efternavn",
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "fax": "Fax",
+      "email": "Email",
+      "company": "Firma",
+      "website": "Website",
+      "street": "Gade",
+      "city": "By",
+      "state": "Region",
+      "zip": "Postnummer",
+      "country": "Land",
+      "placeholders": {
+        "firstName": "Mads",
+        "lastName": "Jensen",
+        "mobile": "+45 20 12 34 56",
+        "phone": "+45 33 44 55 66",
+        "fax": "+45 33 66 55 44",
+        "email": "mads@example.com",
+        "company": "Eksempel ApS",
+        "website": "https://www.eksempel.dk",
+        "street": "Hovedgade 1",
+        "city": "København",
+        "state": "Hovedstaden",
+        "zip": "1000",
+        "country": "Danmark"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Skjult netværk",
+      "password": "Adgangskode",
+      "passwordPlaceholder": "Adgangskode (valgfri)",
+      "security": "Sikkerhed",
+      "securityType": {
+        "none": "Ingen",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mit-WiFi-netværk"
+      }
+    },
+    "email": {
+      "adress": "Emailadresse",
+      "subject": "Emne",
+      "subjectPlaceholder": "Emne (valgfri)",
+      "body": "Besked",
+      "bodyPlaceholder": "Hej, mit navn er...",
+      "placeholders": {
+        "address": "eksempel@domæne.dk"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR-kode forhåndsvisning",
+    "dummyText": "Din QR-kode vises her, så snart du indtaster tekst eller en URL.",
+    "altText": "QR-kode forhåndsvisning"
+  },
+  "download": {
+    "selectFormat": "Vælg format",
+    "downloadButton": "Download QR-kode",
+    "downloadFormat": "Vælg et format og klik 'Download' for at hente QR-koden."
+  },
+  "language": {
+    "select": "Vælg sprog",
+    "en": "Engelsk",
+    "de": "Tysk",
+    "fr": "Fransk",
+    "es": "Spansk",
+    "it": "Italiensk",
+    "pt": "Portugisisk",
+    "nl": "Hollandsk",
+    "pl": "Polsk",
+    "ru": "Russisk",
+    "zh": "Kinesisk",
+    "ja": "Japansk",
+    "ko": "Koreansk",
+    "sv": "Svensk",
+    "tr": "Tyrkisk",
+    "ar": "Arabisk",
+    "hi": "Hindi",
+    "cs": "Tjekkisk",
+    "el": "Græsk",
+    "hu": "Ungarsk",
+    "ro": "Rumænsk",
+    "uk": "Ukrainsk",
+    "vi": "Vietnamesisk",
+    "th": "Thailandsk",
+    "id": "Indonesisk",
+    "da": "Dansk",
+    "no": "Norsk",
+    "fi": "Finsk"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Se projektet på GitHub"
+  }
+}

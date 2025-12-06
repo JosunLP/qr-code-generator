@@ -1,56 +1,120 @@
 {
-	"appTitle": "QRify",
-	"welcomeMessage": "Welcome to the most simple QR Code Generator you can find",
-	"enterText": "Enter the text you want to convert to a QR code.",
-	"tooltip": "No tracking. No login or subscription. We don't store or process any data.",
-	"input": {
-		"textUrl": {
-			"inputType": "Input Type",
-			"value": "Enter value",
-			"placeholder": "Type a text or an URL..."
-		},
-		"placeholder": "Type something...",
-		"vcard": {
-			"firstName": "First Name",
-			"lastName": "Last Name",
-			"mobile": "Mobile",
-			"phone": "Phone",
-			"fax": "Fax",
-			"email": "Email",
-			"company": "Company",
-			"website": "Website",
-			"street": "Street",
-			"city": "City",
-			"state": "State",
-			"zip": "Zip",
-			"country": "Country"
-		},
-		"wifi": {
-			"ssid": "SSID",
-			"hidden": "Hidden",
-			"password": "Password",
-			"passwordPlaceholder": "Password (optional)",
-			"security": "Security",
-			"securityType": {
-				"none": "None",
-				"wep": "WEP",
-				"wpa": "WPA/WPA2"
-			}
-		},
-		"email": {
-			"adress": "Email Adress",
-			"subject": "Subject",
-			"subjectPlaceholder": "Subject (optional)",
-			"body": "Body",
-			"bodyPlaceholder": "Hello, my name is..."
-		}
-	},
-	"preview": {
-		"dummyText": "Your QR code will appear here as soon as you enter text or a URL."
-	},
-	"download": {
-		"selectFormat": "Select the Format",
-		"downloadButton": "Download QR Code",
-		"downloadFormat": "Select a format and click 'Download' to download the QR code."
-	}
+  "appTitle": "QRify",
+  "welcomeMessage": "Welcome to the most simple QR Code Generator you can find",
+  "enterText": "Enter the text you want to convert to a QR code.",
+  "tooltip": "No tracking. No login or subscription. We don't store or process any data.",
+  "input": {
+    "textUrl": {
+      "inputType": "Input Type",
+      "value": "Enter value",
+      "placeholder": "Type a text or an URL..."
+    },
+    "placeholder": "Type something...",
+    "types": {
+      "text": "Text",
+      "url": "URL",
+      "vcard": "Business Card (vCard)",
+      "wifi": "WiFi",
+      "email": "Email"
+    },
+    "vcard": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "mobile": "Mobile",
+      "phone": "Phone",
+      "fax": "Fax",
+      "email": "Email",
+      "company": "Company",
+      "website": "Website",
+      "street": "Street",
+      "city": "City",
+      "state": "State",
+      "zip": "Zip",
+      "country": "Country",
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "mobile": "+1 555 123 4567",
+        "phone": "+1 555 987 6543",
+        "fax": "+1 555 111 2222",
+        "email": "john@doe.com",
+        "company": "Doe Industries",
+        "website": "https://www.johndoe.com",
+        "street": "123 Main Street",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "United States"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Hidden Network",
+      "password": "Password",
+      "passwordPlaceholder": "Password (optional)",
+      "security": "Security",
+      "securityType": {
+        "none": "None",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "My-WiFi-Network"
+      }
+    },
+    "email": {
+      "adress": "Email Address",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject (optional)",
+      "body": "Body",
+      "bodyPlaceholder": "Hello, my name is...",
+      "placeholders": {
+        "address": "example@domain.com"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR Code Preview",
+    "dummyText": "Your QR code will appear here as soon as you enter text or a URL.",
+    "altText": "QR Code Preview"
+  },
+  "download": {
+    "selectFormat": "Select the Format",
+    "downloadButton": "Download QR Code",
+    "downloadFormat": "Select a format and click 'Download' to download the QR code."
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "de": "German",
+    "fr": "French",
+    "es": "Spanish",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "ru": "Russian",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "sv": "Swedish",
+    "tr": "Turkish",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "cs": "Czech",
+    "el": "Greek",
+    "hu": "Hungarian",
+    "ro": "Romanian",
+    "uk": "Ukrainian",
+    "vi": "Vietnamese",
+    "th": "Thai",
+    "id": "Indonesian",
+    "da": "Danish",
+    "no": "Norwegian",
+    "fi": "Finnish"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "View project on GitHub"
+  }
 }

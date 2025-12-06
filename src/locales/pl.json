@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Witamy w najprostszym generatorze kodów QR, jaki możesz znaleźć",
+  "enterText": "Wprowadź tekst, który chcesz przekonwertować na kod QR.",
+  "tooltip": "Bez śledzenia. Bez logowania ani subskrypcji. Nie przechowujemy ani nie przetwarzamy żadnych danych.",
+  "input": {
+    "textUrl": {
+      "inputType": "Typ danych",
+      "value": "Wprowadź wartość",
+      "placeholder": "Wpisz tekst lub URL..."
+    },
+    "placeholder": "Wpisz coś...",
+    "types": {
+      "text": "Tekst",
+      "url": "URL",
+      "vcard": "Wizytówka (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "mobile": "Komórka",
+      "phone": "Telefon",
+      "fax": "Faks",
+      "email": "E-mail",
+      "company": "Firma",
+      "website": "Strona www",
+      "street": "Ulica",
+      "city": "Miasto",
+      "state": "Województwo",
+      "zip": "Kod pocztowy",
+      "country": "Kraj",
+      "placeholders": {
+        "firstName": "Jan",
+        "lastName": "Kowalski",
+        "mobile": "+48 512 345 678",
+        "phone": "+48 22 123 45 67",
+        "fax": "+48 22 987 65 43",
+        "email": "jan@kowalski.pl",
+        "company": "Kowalski Sp. z o.o.",
+        "website": "https://www.kowalski.pl",
+        "street": "ul. Główna 123",
+        "city": "Warszawa",
+        "state": "Mazowieckie",
+        "zip": "00-001",
+        "country": "Polska"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Ukryta sieć",
+      "password": "Hasło",
+      "passwordPlaceholder": "Hasło (opcjonalne)",
+      "security": "Zabezpieczenia",
+      "securityType": {
+        "none": "Brak",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Moja-Siec-WiFi"
+      }
+    },
+    "email": {
+      "adress": "Adres e-mail",
+      "subject": "Temat",
+      "subjectPlaceholder": "Temat (opcjonalny)",
+      "body": "Wiadomość",
+      "bodyPlaceholder": "Cześć, mam na imię...",
+      "placeholders": {
+        "address": "przyklad@domena.pl"
+      }
+    }
+  },
+  "preview": {
+    "title": "Podgląd kodu QR",
+    "dummyText": "Twój kod QR pojawi się tutaj, gdy wpiszesz tekst lub URL.",
+    "altText": "Podgląd kodu QR"
+  },
+  "download": {
+    "selectFormat": "Wybierz format",
+    "downloadButton": "Pobierz kod QR",
+    "downloadFormat": "Wybierz format i kliknij 'Pobierz', aby zapisać kod QR."
+  },
+  "language": {
+    "select": "Wybierz język",
+    "en": "Angielski",
+    "de": "Niemiecki",
+    "fr": "Francuski",
+    "es": "Hiszpański",
+    "it": "Włoski",
+    "pt": "Portugalski",
+    "nl": "Holenderski",
+    "pl": "Polski",
+    "ru": "Rosyjski",
+    "zh": "Chiński",
+    "ja": "Japoński",
+    "ko": "Koreański",
+    "sv": "Szwedzki",
+    "tr": "Turecki",
+    "ar": "Arabski",
+    "hi": "Hindi",
+    "cs": "Czeski",
+    "el": "Grecki",
+    "hu": "Węgierski",
+    "ro": "Rumuński",
+    "uk": "Ukraiński",
+    "vi": "Wietnamski",
+    "th": "Tajski",
+    "id": "Indonezyjski",
+    "da": "Duński",
+    "no": "Norweski",
+    "fi": "Fiński"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Zobacz projekt na GitHub"
+  }
+}

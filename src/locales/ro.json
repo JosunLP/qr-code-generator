@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Bun venit la cel mai simplu generator de coduri QR pe care îl poți găsi",
+  "enterText": "Introdu textul pe care vrei să-l convertești într-un cod QR.",
+  "tooltip": "Fără tracking. Fără autentificare sau abonament. Nu stocăm și nu procesăm date.",
+  "input": {
+    "textUrl": {
+      "inputType": "Tip de intrare",
+      "value": "Introdu valoarea",
+      "placeholder": "Scrie un text sau o adresă URL..."
+    },
+    "placeholder": "Scrie ceva...",
+    "types": {
+      "text": "Text",
+      "url": "URL",
+      "vcard": "Carte de vizită (vCard)",
+      "wifi": "WiFi",
+      "email": "Email"
+    },
+    "vcard": {
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "fax": "Fax",
+      "email": "Email",
+      "company": "Companie",
+      "website": "Site web",
+      "street": "Stradă",
+      "city": "Oraș",
+      "state": "Județ/Regiune",
+      "zip": "Cod poștal",
+      "country": "Țară",
+      "placeholders": {
+        "firstName": "Andrei",
+        "lastName": "Popescu",
+        "mobile": "+40 712 345 678",
+        "phone": "+40 21 234 5678",
+        "fax": "+40 21 876 5432",
+        "email": "andrei@example.com",
+        "company": "Exemplu SRL",
+        "website": "https://www.exemplu.ro",
+        "street": "Str. Principală 123",
+        "city": "București",
+        "state": "București",
+        "zip": "010101",
+        "country": "România"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Rețea ascunsă",
+      "password": "Parolă",
+      "passwordPlaceholder": "Parolă (opțional)",
+      "security": "Securitate",
+      "securityType": {
+        "none": "Nicio",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Reteaua-Mea-WiFi"
+      }
+    },
+    "email": {
+      "adress": "Adresă de email",
+      "subject": "Subiect",
+      "subjectPlaceholder": "Subiect (opțional)",
+      "body": "Mesaj",
+      "bodyPlaceholder": "Salut, mă numesc...",
+      "placeholders": {
+        "address": "exemplu@domeniu.ro"
+      }
+    }
+  },
+  "preview": {
+    "title": "Previzualizare cod QR",
+    "dummyText": "Codul tău QR va apărea aici imediat ce introduci text sau o adresă URL.",
+    "altText": "Previzualizare cod QR"
+  },
+  "download": {
+    "selectFormat": "Selectează formatul",
+    "downloadButton": "Descarcă codul QR",
+    "downloadFormat": "Selectează un format și apasă 'Descarcă' pentru a salva codul QR."
+  },
+  "language": {
+    "select": "Selectează limba",
+    "en": "Engleză",
+    "de": "Germană",
+    "fr": "Franceză",
+    "es": "Spaniolă",
+    "it": "Italiană",
+    "pt": "Portugheză",
+    "nl": "Olandeză",
+    "pl": "Poloneză",
+    "ru": "Rusă",
+    "zh": "Chineză",
+    "ja": "Japoneză",
+    "ko": "Coreeană",
+    "sv": "Suedeză",
+    "tr": "Turcă",
+    "ar": "Arabă",
+    "hi": "Hindi",
+    "cs": "Cehă",
+    "el": "Greacă",
+    "hu": "Maghiară",
+    "ro": "Română",
+    "uk": "Ucraineană",
+    "vi": "Vietnameză",
+    "th": "Thailandeză",
+    "id": "Indoneziană",
+    "da": "Daneză",
+    "no": "Norvegiană",
+    "fi": "Finlandeză"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Vezi proiectul pe GitHub"
+  }
+}

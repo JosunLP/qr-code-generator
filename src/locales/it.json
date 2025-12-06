@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Benvenuto nel generatore di codici QR più semplice che puoi trovare",
+  "enterText": "Inserisci il testo che vuoi convertire in un codice QR.",
+  "tooltip": "Nessun tracciamento. Nessun login o abbonamento. Non memorizziamo né elaboriamo alcun dato.",
+  "input": {
+    "textUrl": {
+      "inputType": "Tipo di input",
+      "value": "Inserisci valore",
+      "placeholder": "Digita un testo o un URL..."
+    },
+    "placeholder": "Digita qualcosa...",
+    "types": {
+      "text": "Testo",
+      "url": "URL",
+      "vcard": "Biglietto da visita (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "mobile": "Cellulare",
+      "phone": "Telefono",
+      "fax": "Fax",
+      "email": "E-mail",
+      "company": "Azienda",
+      "website": "Sito web",
+      "street": "Via",
+      "city": "Città",
+      "state": "Regione",
+      "zip": "CAP",
+      "country": "Paese",
+      "placeholders": {
+        "firstName": "Mario",
+        "lastName": "Rossi",
+        "mobile": "+39 333 123 4567",
+        "phone": "+39 02 1234567",
+        "fax": "+39 02 9876543",
+        "email": "mario@rossi.it",
+        "company": "Rossi S.r.l.",
+        "website": "https://www.rossi.it",
+        "street": "Via Roma 123",
+        "city": "Milano",
+        "state": "Lombardia",
+        "zip": "20121",
+        "country": "Italia"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Rete nascosta",
+      "password": "Password",
+      "passwordPlaceholder": "Password (opzionale)",
+      "security": "Sicurezza",
+      "securityType": {
+        "none": "Nessuna",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "La-Mia-Rete-WiFi"
+      }
+    },
+    "email": {
+      "adress": "Indirizzo e-mail",
+      "subject": "Oggetto",
+      "subjectPlaceholder": "Oggetto (opzionale)",
+      "body": "Messaggio",
+      "bodyPlaceholder": "Ciao, mi chiamo...",
+      "placeholders": {
+        "address": "esempio@dominio.it"
+      }
+    }
+  },
+  "preview": {
+    "title": "Anteprima codice QR",
+    "dummyText": "Il tuo codice QR apparirà qui non appena inserirai del testo o un URL.",
+    "altText": "Anteprima codice QR"
+  },
+  "download": {
+    "selectFormat": "Seleziona formato",
+    "downloadButton": "Scarica codice QR",
+    "downloadFormat": "Seleziona un formato e clicca su 'Scarica' per salvare il codice QR."
+  },
+  "language": {
+    "select": "Seleziona lingua",
+    "en": "Inglese",
+    "de": "Tedesco",
+    "fr": "Francese",
+    "es": "Spagnolo",
+    "it": "Italiano",
+    "pt": "Portoghese",
+    "nl": "Olandese",
+    "pl": "Polacco",
+    "ru": "Russo",
+    "zh": "Cinese",
+    "ja": "Giapponese",
+    "ko": "Coreano",
+    "sv": "Svedese",
+    "tr": "Turco",
+    "ar": "Arabo",
+    "hi": "Hindi",
+    "cs": "Ceco",
+    "el": "Greco",
+    "hu": "Ungherese",
+    "ro": "Rumeno",
+    "uk": "Ucraino",
+    "vi": "Vietnamita",
+    "th": "Tailandese",
+    "id": "Indonesiano",
+    "da": "Danese",
+    "no": "Norvegese",
+    "fi": "Finlandese"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Visualizza progetto su GitHub"
+  }
+}

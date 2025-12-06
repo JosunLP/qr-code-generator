@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Välkommen till den enklaste QR-kodgeneratorn du kan hitta",
+  "enterText": "Ange texten du vill konvertera till en QR-kod.",
+  "tooltip": "Ingen spårning. Ingen inloggning eller prenumeration. Vi lagrar eller behandlar inga data.",
+  "input": {
+    "textUrl": {
+      "inputType": "Inmatningstyp",
+      "value": "Ange värde",
+      "placeholder": "Skriv en text eller en URL..."
+    },
+    "placeholder": "Skriv något...",
+    "types": {
+      "text": "Text",
+      "url": "URL",
+      "vcard": "Visitkort (vCard)",
+      "wifi": "WiFi",
+      "email": "E-post"
+    },
+    "vcard": {
+      "firstName": "Förnamn",
+      "lastName": "Efternamn",
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "fax": "Fax",
+      "email": "E-post",
+      "company": "Företag",
+      "website": "Webbplats",
+      "street": "Gata",
+      "city": "Stad",
+      "state": "Län",
+      "zip": "Postnummer",
+      "country": "Land",
+      "placeholders": {
+        "firstName": "Erik",
+        "lastName": "Svensson",
+        "mobile": "+46 70 123 45 67",
+        "phone": "+46 8 123 45 67",
+        "fax": "+46 8 987 65 43",
+        "email": "erik@svensson.se",
+        "company": "Svensson AB",
+        "website": "https://www.svensson.se",
+        "street": "Storgatan 123",
+        "city": "Stockholm",
+        "state": "Stockholms län",
+        "zip": "111 22",
+        "country": "Sverige"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Dolt nätverk",
+      "password": "Lösenord",
+      "passwordPlaceholder": "Lösenord (valfritt)",
+      "security": "Säkerhet",
+      "securityType": {
+        "none": "Ingen",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mitt-WiFi-Nätverk"
+      }
+    },
+    "email": {
+      "adress": "E-postadress",
+      "subject": "Ämne",
+      "subjectPlaceholder": "Ämne (valfritt)",
+      "body": "Meddelande",
+      "bodyPlaceholder": "Hej, jag heter...",
+      "placeholders": {
+        "address": "exempel@doman.se"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR-kod förhandsgranskning",
+    "dummyText": "Din QR-kod visas här när du anger text eller en URL.",
+    "altText": "QR-kod förhandsgranskning"
+  },
+  "download": {
+    "selectFormat": "Välj format",
+    "downloadButton": "Ladda ner QR-kod",
+    "downloadFormat": "Välj ett format och klicka på 'Ladda ner' för att spara QR-koden."
+  },
+  "language": {
+    "select": "Välj språk",
+    "en": "Engelska",
+    "de": "Tyska",
+    "fr": "Franska",
+    "es": "Spanska",
+    "it": "Italienska",
+    "pt": "Portugisiska",
+    "nl": "Nederländska",
+    "pl": "Polska",
+    "ru": "Ryska",
+    "zh": "Kinesiska",
+    "ja": "Japanska",
+    "ko": "Koreanska",
+    "sv": "Svenska",
+    "tr": "Turkiska",
+    "ar": "Arabiska",
+    "hi": "Hindi",
+    "cs": "Tjeckiska",
+    "el": "Grekiska",
+    "hu": "Ungerska",
+    "ro": "Rumänska",
+    "uk": "Ukrainska",
+    "vi": "Vietnamesiska",
+    "th": "Thailändska",
+    "id": "Indonesiska",
+    "da": "Danska",
+    "no": "Norska",
+    "fi": "Finska"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Visa projekt på GitHub"
+  }
+}

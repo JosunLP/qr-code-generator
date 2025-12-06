@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Selamat datang di pembuat Kode QR paling sederhana yang bisa Anda temukan",
+  "enterText": "Masukkan teks yang ingin Anda ubah menjadi kode QR.",
+  "tooltip": "Tanpa pelacakan. Tanpa login atau langganan. Kami tidak menyimpan atau memproses data apa pun.",
+  "input": {
+    "textUrl": {
+      "inputType": "Jenis Input",
+      "value": "Masukkan nilai",
+      "placeholder": "Ketik teks atau URL..."
+    },
+    "placeholder": "Ketik sesuatu...",
+    "types": {
+      "text": "Teks",
+      "url": "URL",
+      "vcard": "Kartu Nama (vCard)",
+      "wifi": "WiFi",
+      "email": "Email"
+    },
+    "vcard": {
+      "firstName": "Nama Depan",
+      "lastName": "Nama Belakang",
+      "mobile": "Ponsel",
+      "phone": "Telepon",
+      "fax": "Faks",
+      "email": "Email",
+      "company": "Perusahaan",
+      "website": "Situs web",
+      "street": "Jalan",
+      "city": "Kota",
+      "state": "Provinsi/Negara Bagian",
+      "zip": "Kode Pos",
+      "country": "Negara",
+      "placeholders": {
+        "firstName": "Budi",
+        "lastName": "Santoso",
+        "mobile": "+62 812 3456 7890",
+        "phone": "+62 21 234 5678",
+        "fax": "+62 21 876 5432",
+        "email": "budi@example.com",
+        "company": "Perusahaan Contoh",
+        "website": "https://www.contoh.id",
+        "street": "Jl. Merdeka 123",
+        "city": "Jakarta",
+        "state": "DKI Jakarta",
+        "zip": "10110",
+        "country": "Indonesia"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Jaringan tersembunyi",
+      "password": "Kata sandi",
+      "passwordPlaceholder": "Kata sandi (opsional)",
+      "security": "Keamanan",
+      "securityType": {
+        "none": "Tidak ada",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "WiFi-Saya"
+      }
+    },
+    "email": {
+      "adress": "Alamat email",
+      "subject": "Subjek",
+      "subjectPlaceholder": "Subjek (opsional)",
+      "body": "Pesan",
+      "bodyPlaceholder": "Halo, nama saya...",
+      "placeholders": {
+        "address": "contoh@domain.com"
+      }
+    }
+  },
+  "preview": {
+    "title": "Pratinjau Kode QR",
+    "dummyText": "Kode QR Anda akan muncul di sini begitu Anda memasukkan teks atau URL.",
+    "altText": "Pratinjau Kode QR"
+  },
+  "download": {
+    "selectFormat": "Pilih Format",
+    "downloadButton": "Unduh Kode QR",
+    "downloadFormat": "Pilih format dan klik 'Unduh' untuk mengunduh kode QR."
+  },
+  "language": {
+    "select": "Pilih bahasa",
+    "en": "Inggris",
+    "de": "Jerman",
+    "fr": "Prancis",
+    "es": "Spanyol",
+    "it": "Italia",
+    "pt": "Portugis",
+    "nl": "Belanda",
+    "pl": "Polandia",
+    "ru": "Rusia",
+    "zh": "Tionghoa",
+    "ja": "Jepang",
+    "ko": "Korea",
+    "sv": "Swedia",
+    "tr": "Turki",
+    "ar": "Arab",
+    "hi": "Hindi",
+    "cs": "Ceko",
+    "el": "Yunani",
+    "hu": "Hongaria",
+    "ro": "Rumania",
+    "uk": "Ukraina",
+    "vi": "Vietnam",
+    "th": "Thai",
+    "id": "Indonesia",
+    "da": "Denmark",
+    "no": "Norwegia",
+    "fi": "Finlandia"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Lihat proyek di GitHub"
+  }
+}

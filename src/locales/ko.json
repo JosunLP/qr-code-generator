@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "가장 간단한 QR 코드 생성기에 오신 것을 환영합니다",
+  "enterText": "QR 코드로 변환할 텍스트를 입력하세요.",
+  "tooltip": "추적 없음. 로그인이나 구독 불필요. 어떤 데이터도 저장하거나 처리하지 않습니다.",
+  "input": {
+    "textUrl": {
+      "inputType": "입력 유형",
+      "value": "값 입력",
+      "placeholder": "텍스트 또는 URL 입력..."
+    },
+    "placeholder": "무언가 입력...",
+    "types": {
+      "text": "텍스트",
+      "url": "URL",
+      "vcard": "명함 (vCard)",
+      "wifi": "WiFi",
+      "email": "이메일"
+    },
+    "vcard": {
+      "firstName": "이름",
+      "lastName": "성",
+      "mobile": "휴대폰",
+      "phone": "전화",
+      "fax": "팩스",
+      "email": "이메일",
+      "company": "회사",
+      "website": "웹사이트",
+      "street": "주소",
+      "city": "도시",
+      "state": "시/도",
+      "zip": "우편번호",
+      "country": "국가",
+      "placeholders": {
+        "firstName": "길동",
+        "lastName": "홍",
+        "mobile": "+82 10 1234 5678",
+        "phone": "+82 2 1234 5678",
+        "fax": "+82 2 8765 4321",
+        "email": "gildong@hong.kr",
+        "company": "홍길동 주식회사",
+        "website": "https://www.hong.kr",
+        "street": "강남구 테헤란로 123",
+        "city": "서울",
+        "state": "서울특별시",
+        "zip": "06234",
+        "country": "대한민국"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "숨겨진 네트워크",
+      "password": "비밀번호",
+      "passwordPlaceholder": "비밀번호 (선택사항)",
+      "security": "보안",
+      "securityType": {
+        "none": "없음",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "내-WiFi-네트워크"
+      }
+    },
+    "email": {
+      "adress": "이메일 주소",
+      "subject": "제목",
+      "subjectPlaceholder": "제목 (선택사항)",
+      "body": "내용",
+      "bodyPlaceholder": "안녕하세요, 제 이름은...",
+      "placeholders": {
+        "address": "example@domain.kr"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR 코드 미리보기",
+    "dummyText": "텍스트나 URL을 입력하면 여기에 QR 코드가 표시됩니다.",
+    "altText": "QR 코드 미리보기"
+  },
+  "download": {
+    "selectFormat": "형식 선택",
+    "downloadButton": "QR 코드 다운로드",
+    "downloadFormat": "형식을 선택하고 '다운로드'를 클릭하여 QR 코드를 저장하세요."
+  },
+  "language": {
+    "select": "언어 선택",
+    "en": "영어",
+    "de": "독일어",
+    "fr": "프랑스어",
+    "es": "스페인어",
+    "it": "이탈리아어",
+    "pt": "포르투갈어",
+    "nl": "네덜란드어",
+    "pl": "폴란드어",
+    "ru": "러시아어",
+    "zh": "중국어",
+    "ja": "일본어",
+    "ko": "한국어",
+    "sv": "스웨덴어",
+    "tr": "터키어",
+    "ar": "아랍어",
+    "hi": "힌디어",
+    "cs": "체코어",
+    "el": "그리스어",
+    "hu": "헝가리어",
+    "ro": "루마니아어",
+    "uk": "우크라이나어",
+    "vi": "베트남어",
+    "th": "태국어",
+    "id": "인도네시아어",
+    "da": "덴마크어",
+    "no": "노르웨이어",
+    "fi": "핀란드어"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "GitHub에서 프로젝트 보기"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Velkommen til den enkleste QR-kodegeneratoren du kan finne",
+  "enterText": "Skriv inn teksten du vil gjøre om til en QR-kode.",
+  "tooltip": "Ingen sporing. Ingen innlogging eller abonnement. Vi lagrer eller behandler ingen data.",
+  "input": {
+    "textUrl": {
+      "inputType": "Inndatatype",
+      "value": "Skriv inn verdi",
+      "placeholder": "Skriv tekst eller en URL..."
+    },
+    "placeholder": "Skriv noe...",
+    "types": {
+      "text": "Tekst",
+      "url": "URL",
+      "vcard": "Visittkort (vCard)",
+      "wifi": "WiFi",
+      "email": "E-post"
+    },
+    "vcard": {
+      "firstName": "Fornavn",
+      "lastName": "Etternavn",
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "fax": "Faks",
+      "email": "E-post",
+      "company": "Selskap",
+      "website": "Nettside",
+      "street": "Gate",
+      "city": "By",
+      "state": "Fylke/Region",
+      "zip": "Postnummer",
+      "country": "Land",
+      "placeholders": {
+        "firstName": "Ola",
+        "lastName": "Nordmann",
+        "mobile": "+47 912 34 567",
+        "phone": "+47 22 12 34 56",
+        "fax": "+47 22 65 43 21",
+        "email": "ola@example.com",
+        "company": "Eksempelselskap AS",
+        "website": "https://www.eksempel.no",
+        "street": "Storgata 5",
+        "city": "Oslo",
+        "state": "Oslo",
+        "zip": "0155",
+        "country": "Norge"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Skjult nettverk",
+      "password": "Passord",
+      "passwordPlaceholder": "Passord (valgfritt)",
+      "security": "Sikkerhet",
+      "securityType": {
+        "none": "Ingen",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Mitt-WiFi-nett"
+      }
+    },
+    "email": {
+      "adress": "E-postadresse",
+      "subject": "Emne",
+      "subjectPlaceholder": "Emne (valgfritt)",
+      "body": "Melding",
+      "bodyPlaceholder": "Hei, jeg heter...",
+      "placeholders": {
+        "address": "eksempel@domene.no"
+      }
+    }
+  },
+  "preview": {
+    "title": "Forhåndsvisning av QR-kode",
+    "dummyText": "QR-koden din vises her så snart du skriver inn tekst eller en URL.",
+    "altText": "Forhåndsvisning av QR-kode"
+  },
+  "download": {
+    "selectFormat": "Velg format",
+    "downloadButton": "Last ned QR-kode",
+    "downloadFormat": "Velg et format og klikk 'Last ned' for å lagre QR-koden."
+  },
+  "language": {
+    "select": "Velg språk",
+    "en": "Engelsk",
+    "de": "Tysk",
+    "fr": "Fransk",
+    "es": "Spansk",
+    "it": "Italiensk",
+    "pt": "Portugisisk",
+    "nl": "Nederlandsk",
+    "pl": "Polsk",
+    "ru": "Russisk",
+    "zh": "Kinesisk",
+    "ja": "Japansk",
+    "ko": "Koreansk",
+    "sv": "Svensk",
+    "tr": "Tyrkisk",
+    "ar": "Arabisk",
+    "hi": "Hindi",
+    "cs": "Tsjekkisk",
+    "el": "Gresk",
+    "hu": "Ungarsk",
+    "ro": "Rumensk",
+    "uk": "Ukrainsk",
+    "vi": "Vietnamesisk",
+    "th": "Thai",
+    "id": "Indonesisk",
+    "da": "Dansk",
+    "no": "Norsk",
+    "fi": "Finsk"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Se prosjektet på GitHub"
+  }
+}

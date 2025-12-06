@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "ยินดีต้อนรับสู่เครื่องสร้างรหัส QR ที่ง่ายที่สุดเท่าที่คุณจะหาได้",
+  "enterText": "กรอกข้อความที่คุณต้องการแปลงเป็นรหัส QR",
+  "tooltip": "ไม่มีการติดตาม ไม่มีการเข้าสู่ระบบหรือสมัครสมาชิก เราไม่จัดเก็บหรือประมวลผลข้อมูลใด ๆ",
+  "input": {
+    "textUrl": {
+      "inputType": "ประเภทข้อมูลเข้า",
+      "value": "ใส่ค่า",
+      "placeholder": "พิมพ์ข้อความหรือ URL..."
+    },
+    "placeholder": "พิมพ์อะไรสักอย่าง...",
+    "types": {
+      "text": "ข้อความ",
+      "url": "URL",
+      "vcard": "นามบัตร (vCard)",
+      "wifi": "WiFi",
+      "email": "อีเมล"
+    },
+    "vcard": {
+      "firstName": "ชื่อ",
+      "lastName": "นามสกุล",
+      "mobile": "มือถือ",
+      "phone": "โทรศัพท์",
+      "fax": "แฟกซ์",
+      "email": "อีเมล",
+      "company": "บริษัท",
+      "website": "เว็บไซต์",
+      "street": "ถนน",
+      "city": "เมือง",
+      "state": "จังหวัด/รัฐ",
+      "zip": "รหัสไปรษณีย์",
+      "country": "ประเทศ",
+      "placeholders": {
+        "firstName": "สมชาย",
+        "lastName": "สุขใจ",
+        "mobile": "+66 81 234 5678",
+        "phone": "+66 2 234 5678",
+        "fax": "+66 2 876 5432",
+        "email": "somchai@example.com",
+        "company": "บริษัทตัวอย่าง",
+        "website": "https://www.example.co.th",
+        "street": "123 ถนนสุขุมวิท",
+        "city": "กรุงเทพฯ",
+        "state": "กรุงเทพมหานคร",
+        "zip": "10110",
+        "country": "ประเทศไทย"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "เครือข่ายซ่อน",
+      "password": "รหัสผ่าน",
+      "passwordPlaceholder": "รหัสผ่าน (ไม่บังคับ)",
+      "security": "ความปลอดภัย",
+      "securityType": {
+        "none": "ไม่มี",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "WiFi-ของฉัน"
+      }
+    },
+    "email": {
+      "adress": "ที่อยู่อีเมล",
+      "subject": "หัวเรื่อง",
+      "subjectPlaceholder": "หัวเรื่อง (ไม่บังคับ)",
+      "body": "ข้อความ",
+      "bodyPlaceholder": "สวัสดี ฉันชื่อ...",
+      "placeholders": {
+        "address": "example@domain.com"
+      }
+    }
+  },
+  "preview": {
+    "title": "ดูตัวอย่างรหัส QR",
+    "dummyText": "รหัส QR ของคุณจะแสดงที่นี่ทันทีที่คุณกรอกข้อความหรือ URL",
+    "altText": "ดูตัวอย่างรหัส QR"
+  },
+  "download": {
+    "selectFormat": "เลือกรูปแบบ",
+    "downloadButton": "ดาวน์โหลดรหัส QR",
+    "downloadFormat": "เลือกรูปแบบแล้วคลิก 'ดาวน์โหลด' เพื่อบันทึกรหัส QR"
+  },
+  "language": {
+    "select": "เลือกภาษา",
+    "en": "อังกฤษ",
+    "de": "เยอรมัน",
+    "fr": "ฝรั่งเศส",
+    "es": "สเปน",
+    "it": "อิตาลี",
+    "pt": "โปรตุเกส",
+    "nl": "ดัตช์",
+    "pl": "โปแลนด์",
+    "ru": "รัสเซีย",
+    "zh": "จีน",
+    "ja": "ญี่ปุ่น",
+    "ko": "เกาหลี",
+    "sv": "สวีเดน",
+    "tr": "ตุรกี",
+    "ar": "อาหรับ",
+    "hi": "ฮินดี",
+    "cs": "เช็ก",
+    "el": "กรีก",
+    "hu": "ฮังการี",
+    "ro": "โรมาเนีย",
+    "uk": "ยูเครน",
+    "vi": "เวียดนาม",
+    "th": "ไทย",
+    "id": "อินโดนีเซีย",
+    "da": "เดนมาร์ก",
+    "no": "นอร์เวย์",
+    "fi": "ฟินแลนด์"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "ดูโปรเจกต์บน GitHub"
+  }
+}

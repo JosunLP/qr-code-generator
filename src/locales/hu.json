@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Üdvözlünk a legegyszerűbb QR-kód generátorban, amit csak találsz",
+  "enterText": "Írd be a szöveget, amit QR-kóddá szeretnél alakítani.",
+  "tooltip": "Nincs követés. Nincs bejelentkezés vagy előfizetés. Nem tárolunk vagy dolgozunk fel semmilyen adatot.",
+  "input": {
+    "textUrl": {
+      "inputType": "Beviteli típus",
+      "value": "Érték megadása",
+      "placeholder": "Írj be egy szöveget vagy URL-t..."
+    },
+    "placeholder": "Írj be valamit...",
+    "types": {
+      "text": "Szöveg",
+      "url": "URL",
+      "vcard": "Névjegy (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Keresztnév",
+      "lastName": "Vezetéknév",
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "fax": "Fax",
+      "email": "E-mail",
+      "company": "Cég",
+      "website": "Weboldal",
+      "street": "Utca",
+      "city": "Város",
+      "state": "Megye/Régió",
+      "zip": "Irányítószám",
+      "country": "Ország",
+      "placeholders": {
+        "firstName": "Gábor",
+        "lastName": "Kovács",
+        "mobile": "+36 30 123 4567",
+        "phone": "+36 1 234 5678",
+        "fax": "+36 1 876 5432",
+        "email": "gabor@example.com",
+        "company": "Minta Kft.",
+        "website": "https://www.pelda.hu",
+        "street": "Fő utca 12",
+        "city": "Budapest",
+        "state": "Budapest",
+        "zip": "1011",
+        "country": "Magyarország"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Rejtett hálózat",
+      "password": "Jelszó",
+      "passwordPlaceholder": "Jelszó (opcionális)",
+      "security": "Biztonság",
+      "securityType": {
+        "none": "Nincs",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "WiFi-hálóm"
+      }
+    },
+    "email": {
+      "adress": "E-mail cím",
+      "subject": "Tárgy",
+      "subjectPlaceholder": "Tárgy (opcionális)",
+      "body": "Üzenet",
+      "bodyPlaceholder": "Szia, a nevem...",
+      "placeholders": {
+        "address": "pelda@domain.hu"
+      }
+    }
+  },
+  "preview": {
+    "title": "QR-kód előnézet",
+    "dummyText": "A QR-kódod itt jelenik meg, amint beírsz egy szöveget vagy URL-t.",
+    "altText": "QR-kód előnézet"
+  },
+  "download": {
+    "selectFormat": "Formátum kiválasztása",
+    "downloadButton": "QR-kód letöltése",
+    "downloadFormat": "Válassz egy formátumot, majd kattints a 'Letöltés' gombra a QR-kód letöltéséhez."
+  },
+  "language": {
+    "select": "Válassz nyelvet",
+    "en": "Angol",
+    "de": "Német",
+    "fr": "Francia",
+    "es": "Spanyol",
+    "it": "Olasz",
+    "pt": "Portugál",
+    "nl": "Holland",
+    "pl": "Lengyel",
+    "ru": "Orosz",
+    "zh": "Kínai",
+    "ja": "Japán",
+    "ko": "Koreai",
+    "sv": "Svéd",
+    "tr": "Török",
+    "ar": "Arab",
+    "hi": "Hindi",
+    "cs": "Cseh",
+    "el": "Görög",
+    "hu": "Magyar",
+    "ro": "Román",
+    "uk": "Ukrán",
+    "vi": "Vietnámi",
+    "th": "Thai",
+    "id": "Indonéz",
+    "da": "Dán",
+    "no": "Norvég",
+    "fi": "Finn"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Projekt megtekintése a GitHubon"
+  }
+}

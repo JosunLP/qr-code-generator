@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "最もシンプルなQRコードジェネレーターへようこそ",
+  "enterText": "QRコードに変換したいテキストを入力してください。",
+  "tooltip": "トラッキングなし。ログインや購読も不要。データの保存・処理は一切行いません。",
+  "input": {
+    "textUrl": {
+      "inputType": "入力タイプ",
+      "value": "値を入力",
+      "placeholder": "テキストまたはURLを入力..."
+    },
+    "placeholder": "何か入力...",
+    "types": {
+      "text": "テキスト",
+      "url": "URL",
+      "vcard": "名刺 (vCard)",
+      "wifi": "WiFi",
+      "email": "メール"
+    },
+    "vcard": {
+      "firstName": "名",
+      "lastName": "姓",
+      "mobile": "携帯電話",
+      "phone": "電話",
+      "fax": "ファックス",
+      "email": "メール",
+      "company": "会社",
+      "website": "ウェブサイト",
+      "street": "住所",
+      "city": "市区町村",
+      "state": "都道府県",
+      "zip": "郵便番号",
+      "country": "国",
+      "placeholders": {
+        "firstName": "太郎",
+        "lastName": "山田",
+        "mobile": "+81 90 1234 5678",
+        "phone": "+81 3 1234 5678",
+        "fax": "+81 3 8765 4321",
+        "email": "taro@yamada.jp",
+        "company": "山田株式会社",
+        "website": "https://www.yamada.jp",
+        "street": "中央区銀座1-2-3",
+        "city": "東京都",
+        "state": "東京都",
+        "zip": "100-0001",
+        "country": "日本"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "非公開ネットワーク",
+      "password": "パスワード",
+      "passwordPlaceholder": "パスワード（任意）",
+      "security": "セキュリティ",
+      "securityType": {
+        "none": "なし",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "マイWiFiネットワーク"
+      }
+    },
+    "email": {
+      "adress": "メールアドレス",
+      "subject": "件名",
+      "subjectPlaceholder": "件名（任意）",
+      "body": "本文",
+      "bodyPlaceholder": "こんにちは、私の名前は...",
+      "placeholders": {
+        "address": "example@domain.jp"
+      }
+    }
+  },
+  "preview": {
+    "title": "QRコードプレビュー",
+    "dummyText": "テキストまたはURLを入力すると、ここにQRコードが表示されます。",
+    "altText": "QRコードプレビュー"
+  },
+  "download": {
+    "selectFormat": "フォーマットを選択",
+    "downloadButton": "QRコードをダウンロード",
+    "downloadFormat": "フォーマットを選択し、「ダウンロード」をクリックしてQRコードを保存してください。"
+  },
+  "language": {
+    "select": "言語を選択",
+    "en": "英語",
+    "de": "ドイツ語",
+    "fr": "フランス語",
+    "es": "スペイン語",
+    "it": "イタリア語",
+    "pt": "ポルトガル語",
+    "nl": "オランダ語",
+    "pl": "ポーランド語",
+    "ru": "ロシア語",
+    "zh": "中国語",
+    "ja": "日本語",
+    "ko": "韓国語",
+    "sv": "スウェーデン語",
+    "tr": "トルコ語",
+    "ar": "アラビア語",
+    "hi": "ヒンディー語",
+    "cs": "チェコ語",
+    "el": "ギリシャ語",
+    "hu": "ハンガリー語",
+    "ro": "ルーマニア語",
+    "uk": "ウクライナ語",
+    "vi": "ベトナム語",
+    "th": "タイ語",
+    "id": "インドネシア語",
+    "da": "デンマーク語",
+    "no": "ノルウェー語",
+    "fi": "フィンランド語"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "GitHubでプロジェクトを見る"
+  }
+}

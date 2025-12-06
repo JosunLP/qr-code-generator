@@ -1,0 +1,120 @@
+{
+  "appTitle": "QRify",
+  "welcomeMessage": "Vítejte v nejjednodušším generátoru QR kódů, jaký najdete",
+  "enterText": "Zadejte text, který chcete převést na QR kód.",
+  "tooltip": "Žádné sledování. Žádné přihlášení ani předplatné. Neuchováváme ani nezpracováváme žádná data.",
+  "input": {
+    "textUrl": {
+      "inputType": "Typ vstupu",
+      "value": "Zadejte hodnotu",
+      "placeholder": "Napište text nebo URL..."
+    },
+    "placeholder": "Napište něco...",
+    "types": {
+      "text": "Text",
+      "url": "URL",
+      "vcard": "Vizitka (vCard)",
+      "wifi": "WiFi",
+      "email": "E-mail"
+    },
+    "vcard": {
+      "firstName": "Jméno",
+      "lastName": "Příjmení",
+      "mobile": "Mobil",
+      "phone": "Telefon",
+      "fax": "Fax",
+      "email": "E-mail",
+      "company": "Společnost",
+      "website": "Web",
+      "street": "Ulice",
+      "city": "Město",
+      "state": "Stát/Kraj",
+      "zip": "PSČ",
+      "country": "Země",
+      "placeholders": {
+        "firstName": "Jan",
+        "lastName": "Novák",
+        "mobile": "+420 777 123 456",
+        "phone": "+420 222 123 456",
+        "fax": "+420 222 654 321",
+        "email": "jan.novak@example.com",
+        "company": "Ukázková s.r.o.",
+        "website": "https://www.priklad.cz",
+        "street": "Hlavní 123",
+        "city": "Praha",
+        "state": "Praha",
+        "zip": "11000",
+        "country": "Česko"
+      }
+    },
+    "wifi": {
+      "ssid": "SSID",
+      "hidden": "Skrytá síť",
+      "password": "Heslo",
+      "passwordPlaceholder": "Heslo (volitelné)",
+      "security": "Zabezpečení",
+      "securityType": {
+        "none": "Žádné",
+        "wep": "WEP",
+        "wpa": "WPA/WPA2"
+      },
+      "placeholders": {
+        "ssid": "Moje-WiFi-síť"
+      }
+    },
+    "email": {
+      "adress": "E-mailová adresa",
+      "subject": "Předmět",
+      "subjectPlaceholder": "Předmět (volitelné)",
+      "body": "Zpráva",
+      "bodyPlaceholder": "Dobrý den, jmenuji se...",
+      "placeholders": {
+        "address": "priklad@domena.cz"
+      }
+    }
+  },
+  "preview": {
+    "title": "Náhled QR kódu",
+    "dummyText": "Jakmile zadáte text nebo URL, váš QR kód se zobrazí zde.",
+    "altText": "Náhled QR kódu"
+  },
+  "download": {
+    "selectFormat": "Vyberte formát",
+    "downloadButton": "Stáhnout QR kód",
+    "downloadFormat": "Vyberte formát a klikněte na 'Stáhnout' pro uložení QR kódu."
+  },
+  "language": {
+    "select": "Vyberte jazyk",
+    "en": "Angličtina",
+    "de": "Němčina",
+    "fr": "Francouzština",
+    "es": "Španělština",
+    "it": "Italština",
+    "pt": "Portugalština",
+    "nl": "Nizozemština",
+    "pl": "Polština",
+    "ru": "Ruština",
+    "zh": "Čínština",
+    "ja": "Japonština",
+    "ko": "Korejština",
+    "sv": "Švédština",
+    "tr": "Turečtina",
+    "ar": "Arabština",
+    "hi": "Hindština",
+    "cs": "Čeština",
+    "el": "Řečtina",
+    "hu": "Maďarština",
+    "ro": "Rumunština",
+    "uk": "Ukrajinština",
+    "vi": "Vietnamština",
+    "th": "Thajština",
+    "id": "Indonéština",
+    "da": "Dánština",
+    "no": "Norština",
+    "fi": "Finština"
+  },
+  "footer": {
+    "github": "GitHub",
+    "viewOnGithub": "Zobrazit projekt na GitHubu"
+  }
+}
