@@ -1,24 +1,29 @@
 # QRify
 
 ## Project setup
-```
-npm install
+
+```bash
+bun install
 ```
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
+
+```bash
+bun run dev
 ```
 
 ### Compiles and minifies for production
-```
-npm run build
+
+```bash
+bun run build
 ```
 
 ### Lints and fixes files
-```
-npm run lint
+
+```bash
+bun run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+See [Vite Configuration](https://vitejs.dev/config/).

@@ -1,38 +1,54 @@
 <template>
-  <div class="qr-preview-container">
-    <div v-if="qrCodeData" class="qr-code-wrapper">
-      <img :src="qrCodeData" alt="QR Code Preview" />
+  <div class="flex flex-col items-center">
+    <div
+      v-if="qrCodeData"
+      class="bg-white p-4 rounded-lg border-2 border-gray-200 shadow-sm"
+    >
+      <img
+        :src="qrCodeData"
+        alt="QR Code Preview"
+        class="w-48 h-48 sm:w-64 sm:h-64"
+        role="img"
+        :aria-label="t('preview.dummyText')"
+      />
     </div>
-    <div v-else class="placeholder">
-      <p>{{ t("preview.dummyText") }}</p>
+    <div
+      v-else
+      class="flex items-center justify-center w-48 h-48 sm:w-64 sm:h-64 bg-gray-100 rounded-lg border-2 border-dashed border-gray-300"
+      role="status"
+      aria-live="polite"
+    >
+      <p class="text-gray-500 text-sm text-center px-4 italic">
+        {{ t('preview.dummyText') }}
+      </p>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, ref, watch } from "vue";
-import QRCode from "qrcode";
-import { useI18n } from "vue-i18n";
+import QRCode from 'qrcode';
+import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 
 const props = defineProps<{
   inputValue: string;
-  inputType: "text" | "url" | "vcard" | "wifi" | "email";
+  inputType: 'text' | 'url' | 'vcard' | 'wifi' | 'email';
 }>();
 
-const qrCodeData = ref<string>("");
+const qrCodeData = ref<string>('');
 
 async function generateQrCode(value: string) {
   try {
     qrCodeData.value = await QRCode.toDataURL(value, {
-      errorCorrectionLevel: "H",
+      errorCorrectionLevel: 'H',
       margin: 2,
       width: 256,
     });
   } catch (err) {
-    console.error("Fehler bei der QR-Code-Generierung:", err);
-    qrCodeData.value = "";
+    console.error('Fehler bei der QR-Code-Generierung:', err);
+    qrCodeData.value = '';
   }
 }
 
@@ -40,7 +56,7 @@ watch(
   () => props.inputValue,
   (newVal) => {
     if (newVal.trim().length === 0) {
-      qrCodeData.value = "";
+      qrCodeData.value = '';
       return;
     }
     generateQrCode(newVal);
@@ -50,36 +66,7 @@ watch(
 </script>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({});
 </script>
-
-<style lang="scss" scoped>
-.qr-preview-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-
-  .qr-code-wrapper {
-    border: 2px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-
-    img {
-      display: block;
-      width: 256px;
-      height: 256px;
-      /* oder "height: auto;", wenn du die Proportionen dynamisch halten möchtest */
-    }
-  }
-
-  .placeholder {
-    margin-top: 1rem;
-    color: #888;
-    text-align: center;
-    font-style: italic;
-  }
-}
-</style>

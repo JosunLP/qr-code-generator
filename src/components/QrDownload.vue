@@ -1,26 +1,55 @@
 <template>
-  <div class="qr-download-container">
-    <div class="download-controls">
-      <label for="formatSelect">{{ t("download.selectFormat") }}:</label>
-      <select id="formatSelect" v-model="selectedFormat">
-        <option v-for="fmt in formats" :key="fmt" :value="fmt">
-          {{ fmt.toUpperCase() }}
-        </option>
-      </select>
-      <button @click="handleDownload">
-        {{ t("download.downloadButton") }}
+  <div class="space-y-4">
+    <div class="flex flex-col sm:flex-row sm:items-end gap-4">
+      <div class="flex-1">
+        <label for="formatSelect" class="form-label">
+          {{ t('download.selectFormat') }}
+        </label>
+        <select
+          id="formatSelect"
+          v-model="selectedFormat"
+          class="form-select"
+          aria-describedby="format-hint"
+        >
+          <option v-for="fmt in formats" :key="fmt" :value="fmt">
+            {{ fmt.toUpperCase() }}
+          </option>
+        </select>
+      </div>
+      <button
+        type="button"
+        class="btn-primary w-full sm:w-auto"
+        @click="handleDownload"
+        :disabled="!inputValue.trim()"
+        :aria-disabled="!inputValue.trim()"
+      >
+        <svg
+          class="w-5 h-5 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+          />
+        </svg>
+        {{ t('download.downloadButton') }}
       </button>
     </div>
-    <p class="hint">
-      {{ t("download.downloadFormat") }}
+    <p id="format-hint" class="text-sm text-gray-500">
+      {{ t('download.downloadFormat') }}
     </p>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, ref } from "vue";
-import QRCode from "qrcode";
-import { useI18n } from "vue-i18n";
+import QRCode from 'qrcode';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 
@@ -28,16 +57,14 @@ const props = defineProps<{
   inputValue: string;
 }>();
 
-const formats = ["svg", "png", "jpeg", "gif", "tiff", "webp"] as const;
+const formats = ['svg', 'png', 'jpeg', 'gif', 'tiff', 'webp'] as const;
 
-type FormatType = (typeof formats)[number]; // "svg" | "png" | "jpeg" | "gif" | "tiff" | "webp"
+type FormatType = (typeof formats)[number];
 
-// aktuell ausgewähltes Format
-const selectedFormat = ref<FormatType>("png");
+const selectedFormat = ref<FormatType>('png');
 
-// Hilfsfunktion, um eine Data-URL oder Blob-URL herunterzuladen.
 function downloadFile(url: string, filename: string) {
-  const link = document.createElement("a");
+  const link = document.createElement('a');
   link.href = url;
   link.download = filename;
   document.body.appendChild(link);
@@ -48,79 +75,32 @@ function downloadFile(url: string, filename: string) {
 async function handleDownload() {
   const input = props.inputValue.trim();
   if (!input) {
-    // Wenn nichts eingegeben wurde, kein Download
-    alert("Bitte zuerst einen Text oder eine URL eingeben!");
     return;
   }
 
   try {
-    if (selectedFormat.value === "svg") {
-      const svgString = await QRCode.toString(input, { type: "svg" });
-      const blob = new Blob([svgString], { type: "image/svg+xml" });
+    if (selectedFormat.value === 'svg') {
+      const svgString = await QRCode.toString(input, { type: 'svg' });
+      const blob = new Blob([svgString], { type: 'image/svg+xml' });
       const blobUrl = URL.createObjectURL(blob);
-      downloadFile(blobUrl, "qrcode.svg");
-      URL.revokeObjectURL(blobUrl); // aufräumen
+      downloadFile(blobUrl, 'qrcode.svg');
+      URL.revokeObjectURL(blobUrl);
     } else {
       const dataUrl = await QRCode.toDataURL(input, {
-        errorCorrectionLevel: "H",
+        errorCorrectionLevel: 'H',
         margin: 2,
-        width: 256,
+        width: 512,
       });
       downloadFile(dataUrl, `qrcode.${selectedFormat.value}`);
     }
   } catch (err) {
-    console.error("Fehler beim Erstellen des QR Codes:", err);
-    alert(
-      "Beim Erstellen oder Herunterladen des QR-Codes ist ein Fehler aufgetreten."
-    );
+    console.error('Fehler beim Erstellen des QR Codes:', err);
   }
 }
 </script>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({});
 </script>
-
-<style lang="scss" scoped>
-.qr-download-container {
-  margin-top: 1rem;
-
-  .download-controls {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-
-    label {
-      font-weight: 600;
-    }
-
-    select {
-      padding: 0.3rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      padding: 0.4rem 0.8rem;
-      border: none;
-      border-radius: 4px;
-      background-color: #4caf50;
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #45a049;
-      }
-    }
-  }
-
-  .hint {
-    font-size: 0.9rem;
-    color: #777;
-  }
-}
-</style>

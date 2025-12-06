@@ -1,216 +1,126 @@
 <template>
-  <img alt="logo" class="logo" src="./assets/logo.png" />
-  <h1>{{ t("appTitle") }}</h1>
-  <h4>
-    {{ t("welcomeMessage") }}
-    <!-- Tooltip-Icon -->
-    <span class="tooltip-icon" :data-tooltip="t('tooltip')"> ? </span>
-  </h4>
-  <LocalSwitch class="switch" />
-  <p>{{ t("enterText") }}</p>
+  <div
+    class="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-6 sm:py-10 px-4"
+  >
+    <div class="max-w-2xl mx-auto">
+      <!-- Header -->
+      <header class="text-center mb-8">
+        <img
+          alt="QRify Logo"
+          class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4"
+          src="./assets/logo.png"
+        />
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+          {{ t('appTitle') }}
+        </h1>
+        <p class="text-gray-600 mb-4 flex items-center justify-center gap-2">
+          {{ t('welcomeMessage') }}
+          <button
+            type="button"
+            class="inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-gray-500 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+            :aria-label="t('tooltip')"
+            @click="showTooltip = !showTooltip"
+          >
+            ?
+          </button>
+        </p>
 
-  <div class="app-container">
-    <!-- Eingabekomponente -->
-    <QrInput
-      @update:inputValue="onInputValueChange"
-      @update:inputType="onInputTypeChange"
-    />
+        <!-- Tooltip Content -->
+        <div
+          v-if="showTooltip"
+          role="tooltip"
+          class="inline-block max-w-xs p-3 mb-4 text-sm text-left text-gray-700 bg-white rounded-lg shadow-lg border border-gray-200"
+        >
+          {{ t('tooltip') }}
+        </div>
 
-    <!-- Vorschaukomponente -->
-    <QrPreview :inputValue="inputValue" :inputType="inputType" />
+        <!-- Language Switch -->
+        <LocalSwitch class="mx-auto" />
+      </header>
 
-    <!-- Downloadkomponente -->
-    <QrDownload :inputValue="inputValue" />
+      <!-- Main Content -->
+      <main>
+        <p class="text-center text-gray-600 mb-6">
+          {{ t('enterText') }}
+        </p>
+
+        <div class="space-y-6">
+          <!-- Input Card -->
+          <section aria-labelledby="input-heading" class="card">
+            <h2 id="input-heading" class="sr-only">
+              {{ t('input.textUrl.inputType') }}
+            </h2>
+            <QrInput
+              @update:inputValue="onInputValueChange"
+              @update:inputType="onInputTypeChange"
+            />
+          </section>
+
+          <!-- Preview Card -->
+          <section aria-labelledby="preview-heading" class="card">
+            <h2 id="preview-heading" class="sr-only">
+              {{ t('preview.dummyText') }}
+            </h2>
+            <QrPreview :inputValue="inputValue" :inputType="inputType" />
+          </section>
+
+          <!-- Download Card -->
+          <section aria-labelledby="download-heading" class="card">
+            <h2 id="download-heading" class="sr-only">
+              {{ t('download.selectFormat') }}
+            </h2>
+            <QrDownload :inputValue="inputValue" />
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-10 text-center">
+        <a
+          href="https://github.com/JosunLP/qr-code-generator"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded px-2 py-1"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span class="font-medium">GitHub</span>
+        </a>
+      </footer>
+    </div>
   </div>
-  <footer>
-    <a href="https://github.com/JosunLP/qr-code-generator" target="_blank"
-      >GitHub</a
-    >
-  </footer>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { useI18n } from "vue-i18n";
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import LocalSwitch from './components/LocalSwitch.vue';
+import QrDownload from './components/QrDownload.vue';
+import QrInput from './components/QrInput.vue';
+import QrPreview from './components/QrPreview.vue';
 
 const { t } = useI18n();
-const inputValue = ref("");
-const inputType = ref<"text" | "url" | "vcard" | "wifi" | "email">("text");
+const inputValue = ref('');
+const inputType = ref<'text' | 'url' | 'vcard' | 'wifi' | 'email'>('text');
+const showTooltip = ref(false);
 
 function onInputValueChange(val: string) {
   inputValue.value = val;
 }
 
 function onInputTypeChange(
-  newType: "text" | "url" | "vcard" | "wifi" | "email"
+  newType: 'text' | 'url' | 'vcard' | 'wifi' | 'email'
 ) {
   inputType.value = newType;
 }
 </script>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import QrInput from "./components/QrInput.vue";
-import QrPreview from "./components/QrPreview.vue";
-import QrDownload from "./components/QrDownload.vue";
-import LocalSwitch from "./components/LocalSwitch.vue";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    QrInput,
-    QrPreview,
-    QrDownload,
-    LocalSwitch,
-  },
-});
-</script>
-
-<style lang="scss" scoped>
-@import "./styles/main.scss";
-
-/* Heading-Styles */
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-h4 {
-  margin-bottom: 1rem;
-  color: #555;
-
-  display: flex;
-  align-items: center;
-  justify-content: center; // <-- zentriert den Inhalt
-
-  .tooltip-icon {
-    margin-left: 0.5rem;
-  }
-}
-
-p {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #666;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  width: 100px;
-  height: 100px;
-  margin-top: 2rem;
-}
-
-.switch {
-  margin: 0 auto;
-  display: block;
-}
-
-footer {
-  text-align: center;
-  margin-top: 2rem;
-  color: #777;
-
-  a {
-    color: #777;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-      color: #333;
-    }
-  }
-}
-
-/* Container-Styling */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 700px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-
-  & > * {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 1rem;
-    background: #fafafa;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
-  }
-}
-
-/* Tooltip-Icon */
-.tooltip-icon {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #555;
-  background-color: #eee;
-  padding: 0 0.4rem;
-  border-radius: 50%;
-  line-height: 1.5;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #ddd;
-  }
-
-  /* Tooltip-Text, der mit data-tooltip gesetzt wird */
-  &::after {
-    content: attr(data-tooltip);
-    /* Standardmäßig unsichtbar */
-    position: absolute;
-    left: 50%;
-    bottom: 120%;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: 200px;
-
-    padding: 0.4rem 0.6rem;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.8rem;
-    border-radius: 4px;
-    text-align: center;
-    white-space: normal;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-  }
-
-  /* kleiner Pfeil unter dem Tooltip */
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 110%;
-    transform: translateX(-50%);
-    border: 0.4rem solid transparent;
-    border-top-color: #333;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-  }
-
-  /* Zeigen, wenn man hovert */
-  &:hover::after,
-  &:hover::before {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-</style>
