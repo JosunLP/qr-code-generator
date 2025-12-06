@@ -11,26 +11,66 @@
         <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
           {{ t("appTitle") }}
         </h1>
-        <p class="text-gray-600 mb-4 flex items-center justify-center gap-2">
+        <p class="relative text-gray-600 mb-4 flex items-center justify-center gap-2">
           {{ t("welcomeMessage") }}
-          <button
-            type="button"
-            class="inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-gray-500 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-            :aria-label="t('tooltip')"
-            @click="showTooltip = !showTooltip"
-          >
-            ?
-          </button>
+          <span class="inline-block sm:relative" ref="tooltipContainer">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center w-7 h-7 text-sm font-bold text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition-colors shadow-md hover:shadow-lg"
+              :aria-label="t('tooltip')"
+              :aria-expanded="showTooltip"
+              aria-describedby="tooltip-content"
+              @click="showTooltip = !showTooltip"
+              @mouseenter="showTooltipHover = true"
+              @mouseleave="showTooltipHover = false"
+            >
+              ?
+            </button>
+            <!-- Tooltip Content -->
+            <Transition
+              enter-active-class="transition ease-out duration-200"
+              enter-from-class="opacity-0 translate-y-1"
+              enter-to-class="opacity-100 translate-y-0"
+              leave-active-class="transition ease-in duration-150"
+              leave-from-class="opacity-100 translate-y-0"
+              leave-to-class="opacity-0 translate-y-1"
+            >
+              <div
+                v-if="showTooltip || showTooltipHover"
+                id="tooltip-content"
+                role="tooltip"
+                class="absolute z-50 top-full mt-3 w-72 max-w-[calc(100vw-2rem)] p-4 text-sm text-left text-gray-700 bg-white rounded-xl shadow-xl border border-gray-200 left-0 right-0 mx-auto sm:left-1/2 sm:right-auto sm:mx-0 sm:-translate-x-1/2"
+                @mouseenter="showTooltipHover = true"
+                @mouseleave="showTooltipHover = false"
+              >
+                <!-- Tooltip Arrow -->
+                <div
+                  class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-200 rotate-45"
+                ></div>
+                <div class="relative flex items-start gap-3">
+                  <span
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-4 h-4 text-green-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="pt-0.5">{{ t("tooltip") }}</span>
+                </div>
+              </div>
+            </Transition>
+          </span>
         </p>
-
-        <!-- Tooltip Content -->
-        <div
-          v-if="showTooltip"
-          role="tooltip"
-          class="inline-block max-w-xs p-3 mb-4 text-sm text-left text-gray-700 bg-white rounded-lg shadow-lg border border-gray-200"
-        >
-          {{ t("tooltip") }}
-        </div>
 
         <!-- Language Switch -->
         <LocalSwitch class="mx-auto" />
@@ -96,7 +136,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref } from "vue";
+  import { onMounted, onUnmounted, ref } from "vue";
   import { useI18n } from "vue-i18n";
   import LocalSwitch from "./components/LocalSwitch.vue";
   import QrDownload from "./components/QrDownload.vue";
@@ -107,6 +147,32 @@
   const inputValue = ref("");
   const inputType = ref<"text" | "url" | "vcard" | "wifi" | "email">("text");
   const showTooltip = ref(false);
+  const showTooltipHover = ref(false);
+  const tooltipContainer = ref<HTMLElement | null>(null);
+
+  // Close tooltip when clicking outside
+  function handleClickOutside(event: MouseEvent) {
+    if (tooltipContainer.value && !tooltipContainer.value.contains(event.target as Node)) {
+      showTooltip.value = false;
+    }
+  }
+
+  // Close tooltip on Escape key
+  function handleKeyDown(event: KeyboardEvent) {
+    if (event.key === "Escape") {
+      showTooltip.value = false;
+    }
+  }
+
+  onMounted(() => {
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+  });
+
+  onUnmounted(() => {
+    document.removeEventListener("click", handleClickOutside);
+    document.removeEventListener("keydown", handleKeyDown);
+  });
 
   function onInputValueChange(val: string) {
     inputValue.value = val;
