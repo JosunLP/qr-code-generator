@@ -34,7 +34,7 @@
     <a href="https://tailwindcss.com/">
       <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white" alt="TailwindCSS">
     </a>
-    <a href="http://makeapullrequest.com">
+    <a href="https://github.com/JosunLP/qr-code-generator/pulls">
       <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome">
     </a>
   </p>
