@@ -37,7 +37,7 @@
         "mobile": "+66 81 234 5678",
         "phone": "+66 2 234 5678",
         "fax": "+66 2 876 5432",
-        "email": "somchai@example.com",
+        "email": "somchai{'@'}example.com",
         "company": "บริษัทตัวอย่าง",
         "website": "https://www.example.co.th",
         "street": "123 ถนนสุขุมวิท",
@@ -69,7 +69,7 @@
       "body": "ข้อความ",
       "bodyPlaceholder": "สวัสดี ฉันชื่อ...",
       "placeholders": {
-        "address": "example@domain.com"
+        "address": "example{'@'}domain.com"
       }
     }
   },

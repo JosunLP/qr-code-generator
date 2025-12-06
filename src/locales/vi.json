@@ -37,7 +37,7 @@
         "mobile": "+84 90 123 4567",
         "phone": "+84 28 2345 6789",
         "fax": "+84 28 8765 4321",
-        "email": "minh@example.com",
+        "email": "minh{'@'}example.com",
         "company": "Công ty Ví dụ",
         "website": "https://www.vidu.vn",
         "street": "123 Lê Lợi",
@@ -69,7 +69,7 @@
       "body": "Nội dung",
       "bodyPlaceholder": "Xin chào, tôi tên là...",
       "placeholders": {
-        "address": "vidu@domain.com"
+        "address": "vidu{'@'}domain.com"
       }
     }
   },

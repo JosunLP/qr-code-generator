@@ -37,7 +37,7 @@
         "mobile": "+1 555 123 4567",
         "phone": "+1 555 987 6543",
         "fax": "+1 555 111 2222",
-        "email": "john@doe.com",
+        "email": "john{'@'}doe.com",
         "company": "Doe Industries",
         "website": "https://www.johndoe.com",
         "street": "123 Main Street",
@@ -69,7 +69,7 @@
       "body": "Body",
       "bodyPlaceholder": "Hello, my name is...",
       "placeholders": {
-        "address": "example@domain.com"
+        "address": "example{'@'}domain.com"
       }
     }
   },

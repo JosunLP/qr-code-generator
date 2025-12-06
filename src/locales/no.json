@@ -37,7 +37,7 @@
         "mobile": "+47 912 34 567",
         "phone": "+47 22 12 34 56",
         "fax": "+47 22 65 43 21",
-        "email": "ola@example.com",
+        "email": "ola{'@'}example.com",
         "company": "Eksempelselskap AS",
         "website": "https://www.eksempel.no",
         "street": "Storgata 5",
@@ -69,7 +69,7 @@
       "body": "Melding",
       "bodyPlaceholder": "Hei, jeg heter...",
       "placeholders": {
-        "address": "eksempel@domene.no"
+        "address": "eksempel{'@'}domene.no"
       }
     }
   },

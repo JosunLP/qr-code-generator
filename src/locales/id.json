@@ -37,7 +37,7 @@
         "mobile": "+62 812 3456 7890",
         "phone": "+62 21 234 5678",
         "fax": "+62 21 876 5432",
-        "email": "budi@example.com",
+        "email": "budi{'@'}example.com",
         "company": "Perusahaan Contoh",
         "website": "https://www.contoh.id",
         "street": "Jl. Merdeka 123",
@@ -69,7 +69,7 @@
       "body": "Pesan",
       "bodyPlaceholder": "Halo, nama saya...",
       "placeholders": {
-        "address": "contoh@domain.com"
+        "address": "contoh{'@'}domain.com"
       }
     }
   },

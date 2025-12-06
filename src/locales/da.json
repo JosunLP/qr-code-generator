@@ -37,7 +37,7 @@
         "mobile": "+45 20 12 34 56",
         "phone": "+45 33 44 55 66",
         "fax": "+45 33 66 55 44",
-        "email": "mads@example.com",
+        "email": "mads{'@'}example.com",
         "company": "Eksempel ApS",
         "website": "https://www.eksempel.dk",
         "street": "Hovedgade 1",

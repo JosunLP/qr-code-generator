@@ -37,7 +37,7 @@
         "mobile": "+358 40 123 4567",
         "phone": "+358 9 123 4567",
         "fax": "+358 9 765 4321",
-        "email": "matti@example.com",
+        "email": "matti{'@'}example.com",
         "company": "Esimerkki Oy",
         "website": "https://www.esimerkki.fi",
         "street": "Esimerkkikatu 1",
@@ -69,7 +69,7 @@
       "body": "Viestiteksti",
       "bodyPlaceholder": "Hei, nimeni on...",
       "placeholders": {
-        "address": "esimerkki@domain.fi"
+        "address": "esimerkki{'@'}domain.fi"
       }
     }
   },

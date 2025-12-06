@@ -37,7 +37,7 @@
         "mobile": "+420 777 123 456",
         "phone": "+420 222 123 456",
         "fax": "+420 222 654 321",
-        "email": "jan.novak@example.com",
+        "email": "jan.novak{'@'}example.com",
         "company": "Ukázková s.r.o.",
         "website": "https://www.priklad.cz",
         "street": "Hlavní 123",
@@ -69,7 +69,7 @@
       "body": "Zpráva",
       "bodyPlaceholder": "Dobrý den, jmenuji se...",
       "placeholders": {
-        "address": "priklad@domena.cz"
+        "address": "priklad{'@'}domena.cz"
       }
     }
   },

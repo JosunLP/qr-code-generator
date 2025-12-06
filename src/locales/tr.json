@@ -37,7 +37,7 @@
         "mobile": "+90 532 123 45 67",
         "phone": "+90 212 123 45 67",
         "fax": "+90 212 765 43 21",
-        "email": "ahmet@yilmaz.com",
+        "email": "ahmet{'@'}yilmaz.com",
         "company": "Yılmaz A.Ş.",
         "website": "https://www.ornek.com",
         "street": "İstiklal Cad. 123",
@@ -69,7 +69,7 @@
       "body": "Mesaj",
       "bodyPlaceholder": "Merhaba, benim adım...",
       "placeholders": {
-        "address": "ornek@domain.com"
+        "address": "ornek{'@'}domain.com"
       }
     }
   },

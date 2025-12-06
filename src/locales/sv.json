@@ -37,7 +37,7 @@
         "mobile": "+46 70 123 45 67",
         "phone": "+46 8 123 45 67",
         "fax": "+46 8 987 65 43",
-        "email": "erik@svensson.se",
+        "email": "erik{'@'}svensson.se",
         "company": "Svensson AB",
         "website": "https://www.svensson.se",
         "street": "Storgatan 123",
@@ -69,7 +69,7 @@
       "body": "Meddelande",
       "bodyPlaceholder": "Hej, jag heter...",
       "placeholders": {
-        "address": "exempel@doman.se"
+        "address": "exempel{'@'}doman.se"
       }
     }
   },

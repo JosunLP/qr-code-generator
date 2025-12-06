@@ -37,7 +37,7 @@
         "mobile": "+91 98765 43210",
         "phone": "+91 22 2345 6789",
         "fax": "+91 22 8765 4321",
-        "email": "rahul@example.com",
+        "email": "rahul{'@'}example.com",
         "company": "उदाहरण प्रा. लि.",
         "website": "https://www.example.com",
         "street": "एम जी रोड 123",
@@ -69,7 +69,7 @@
       "body": "संदेश",
       "bodyPlaceholder": "नमस्ते, मेरा नाम...",
       "placeholders": {
-        "address": "example@domain.com"
+        "address": "example{'@'}domain.com"
       }
     }
   },

@@ -37,7 +37,7 @@
         "mobile": "+380 67 123 4567",
         "phone": "+380 44 234 5678",
         "fax": "+380 44 876 5432",
-        "email": "oleksii@example.com",
+        "email": "oleksii{'@'}example.com",
         "company": "Приклад ТОВ",
         "website": "https://www.pryklad.ua",
         "street": "Вул. Шевченка 10",
@@ -69,7 +69,7 @@
       "body": "Повідомлення",
       "bodyPlaceholder": "Привіт, мене звати...",
       "placeholders": {
-        "address": "pryklad@domen.ua"
+        "address": "pryklad{'@'}domen.ua"
       }
     }
   },

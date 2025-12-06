@@ -37,7 +37,7 @@
         "mobile": "+34 612 345 678",
         "phone": "+34 91 123 45 67",
         "fax": "+34 91 987 65 43",
-        "email": "juan@garcia.es",
+        "email": "juan{'@'}garcia.es",
         "company": "García S.L.",
         "website": "https://www.garcia.es",
         "street": "Calle Mayor 123",
@@ -69,7 +69,7 @@
       "body": "Mensaje",
       "bodyPlaceholder": "Hola, me llamo...",
       "placeholders": {
-        "address": "ejemplo@dominio.es"
+        "address": "ejemplo{'@'}dominio.es"
       }
     }
   },

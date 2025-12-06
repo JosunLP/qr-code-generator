@@ -37,7 +37,7 @@
         "mobile": "+86 138 1234 5678",
         "phone": "+86 10 1234 5678",
         "fax": "+86 10 8765 4321",
-        "email": "xiaoming@wang.cn",
+        "email": "xiaoming{'@'}wang.cn",
         "company": "王氏科技有限公司",
         "website": "https://www.wang.cn",
         "street": "中关村大街123号",
@@ -69,7 +69,7 @@
       "body": "内容",
       "bodyPlaceholder": "你好，我叫...",
       "placeholders": {
-        "address": "example@domain.cn"
+        "address": "example{'@'}domain.cn"
       }
     }
   },

@@ -37,7 +37,7 @@
         "mobile": "+48 512 345 678",
         "phone": "+48 22 123 45 67",
         "fax": "+48 22 987 65 43",
-        "email": "jan@kowalski.pl",
+        "email": "jan{'@'}kowalski.pl",
         "company": "Kowalski Sp. z o.o.",
         "website": "https://www.kowalski.pl",
         "street": "ul. Główna 123",
@@ -69,7 +69,7 @@
       "body": "Wiadomość",
       "bodyPlaceholder": "Cześć, mam na imię...",
       "placeholders": {
-        "address": "przyklad@domena.pl"
+        "address": "przyklad{'@'}domena.pl"
       }
     }
   },

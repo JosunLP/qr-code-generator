@@ -37,7 +37,7 @@
         "mobile": "+49 123 456789",
         "phone": "+49 40 123456",
         "fax": "+49 40 987654",
-        "email": "max@mustermann.de",
+        "email": "max{'@'}mustermann.de",
         "company": "Mustermann GmbH",
         "website": "https://www.mustermann.de",
         "street": "Musterstr. 123",
@@ -69,7 +69,7 @@
       "body": "Nachricht",
       "bodyPlaceholder": "Hallo, mein Name ist...",
       "placeholders": {
-        "address": "beispiel@domain.de"
+        "address": "beispiel{'@'}domain.de"
       }
     }
   },

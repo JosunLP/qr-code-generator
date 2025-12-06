@@ -37,7 +37,7 @@
         "mobile": "+31 6 12345678",
         "phone": "+31 20 1234567",
         "fax": "+31 20 9876543",
-        "email": "jan@devries.nl",
+        "email": "jan{'@'}devries.nl",
         "company": "De Vries B.V.",
         "website": "https://www.devries.nl",
         "street": "Hoofdstraat 123",
@@ -69,7 +69,7 @@
       "body": "Bericht",
       "bodyPlaceholder": "Hallo, mijn naam is...",
       "placeholders": {
-        "address": "voorbeeld@domein.nl"
+        "address": "voorbeeld{'@'}domein.nl"
       }
     }
   },

@@ -37,7 +37,7 @@
         "mobile": "+30 691 234 5678",
         "phone": "+30 21 0123 4567",
         "fax": "+30 21 0765 4321",
-        "email": "george@example.com",
+        "email": "george{'@'}example.com",
         "company": "Παράδειγμα ΑΕ",
         "website": "https://www.example.gr",
         "street": "Ερμού 123",
@@ -69,7 +69,7 @@
       "body": "Μήνυμα",
       "bodyPlaceholder": "Γεια, ονομάζομαι...",
       "placeholders": {
-        "address": "example@domain.com"
+        "address": "example{'@'}domain.com"
       }
     }
   },

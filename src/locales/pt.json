@@ -37,7 +37,7 @@
         "mobile": "+55 11 91234 5678",
         "phone": "+55 11 1234 5678",
         "fax": "+55 11 9876 5432",
-        "email": "joao@silva.com.br",
+        "email": "joao{'@'}silva.com.br",
         "company": "Silva Ltda.",
         "website": "https://www.silva.com.br",
         "street": "Rua das Flores 123",
@@ -69,7 +69,7 @@
       "body": "Mensagem",
       "bodyPlaceholder": "Olá, meu nome é...",
       "placeholders": {
-        "address": "exemplo@dominio.com.br"
+        "address": "exemplo{'@'}dominio.com.br"
       }
     }
   },

@@ -37,7 +37,7 @@
         "mobile": "+39 333 123 4567",
         "phone": "+39 02 1234567",
         "fax": "+39 02 9876543",
-        "email": "mario@rossi.it",
+        "email": "mario{'@'}rossi.it",
         "company": "Rossi S.r.l.",
         "website": "https://www.rossi.it",
         "street": "Via Roma 123",
@@ -69,7 +69,7 @@
       "body": "Messaggio",
       "bodyPlaceholder": "Ciao, mi chiamo...",
       "placeholders": {
-        "address": "esempio@dominio.it"
+        "address": "esempio{'@'}dominio.it"
       }
     }
   },

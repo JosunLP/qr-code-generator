@@ -37,7 +37,7 @@
         "mobile": "+81 90 1234 5678",
         "phone": "+81 3 1234 5678",
         "fax": "+81 3 8765 4321",
-        "email": "taro@yamada.jp",
+        "email": "taro{'@'}yamada.jp",
         "company": "山田株式会社",
         "website": "https://www.yamada.jp",
         "street": "中央区銀座1-2-3",
@@ -69,7 +69,7 @@
       "body": "本文",
       "bodyPlaceholder": "こんにちは、私の名前は...",
       "placeholders": {
-        "address": "example@domain.jp"
+        "address": "example{'@'}domain.jp"
       }
     }
   },

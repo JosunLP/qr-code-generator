@@ -37,7 +37,7 @@
         "mobile": "+82 10 1234 5678",
         "phone": "+82 2 1234 5678",
         "fax": "+82 2 8765 4321",
-        "email": "gildong@hong.kr",
+        "email": "gildong{'@'}hong.kr",
         "company": "홍길동 주식회사",
         "website": "https://www.hong.kr",
         "street": "강남구 테헤란로 123",
@@ -69,7 +69,7 @@
       "body": "내용",
       "bodyPlaceholder": "안녕하세요, 제 이름은...",
       "placeholders": {
-        "address": "example@domain.kr"
+        "address": "example{'@'}domain.kr"
       }
     }
   },

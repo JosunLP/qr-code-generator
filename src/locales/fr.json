@@ -37,7 +37,7 @@
         "mobile": "+33 6 12 34 56 78",
         "phone": "+33 1 23 45 67 89",
         "fax": "+33 1 98 76 54 32",
-        "email": "jean@dupont.fr",
+        "email": "jean{'@'}dupont.fr",
         "company": "Dupont SARL",
         "website": "https://www.dupont.fr",
         "street": "123 Rue de Paris",
@@ -69,7 +69,7 @@
       "body": "Message",
       "bodyPlaceholder": "Bonjour, je m'appelle...",
       "placeholders": {
-        "address": "exemple@domaine.fr"
+        "address": "exemple{'@'}domaine.fr"
       }
     }
   },

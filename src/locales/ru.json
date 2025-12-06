@@ -37,7 +37,7 @@
         "mobile": "+7 912 345 67 89",
         "phone": "+7 495 123 45 67",
         "fax": "+7 495 987 65 43",
-        "email": "ivan@ivanov.ru",
+        "email": "ivan{'@'}ivanov.ru",
         "company": "Иванов ООО",
         "website": "https://www.ivanov.ru",
         "street": "ул. Главная 123",
@@ -69,7 +69,7 @@
       "body": "Сообщение",
       "bodyPlaceholder": "Привет, меня зовут...",
       "placeholders": {
-        "address": "primer@domen.ru"
+        "address": "primer{'@'}domen.ru"
       }
     }
   },

@@ -37,7 +37,7 @@
         "mobile": "+966 5 1234 5678",
         "phone": "+966 11 234 5678",
         "fax": "+966 11 876 5432",
-        "email": "ahmad@example.com",
+        "email": "ahmad{'@'}example.com",
         "company": "شركة مثال",
         "website": "https://www.example.com",
         "street": "شارع الملك 123",
@@ -69,7 +69,7 @@
       "body": "الرسالة",
       "bodyPlaceholder": "مرحبًا، اسمي...",
       "placeholders": {
-        "address": "example@domain.com"
+        "address": "example{'@'}domain.com"
       }
     }
   },
