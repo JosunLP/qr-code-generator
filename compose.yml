@@ -1,0 +1,6 @@
+services:
+  qrify:
+    image: ghcr.io/JosunLP/qr-code-generator
+    ports:
+      - "8080:80"
+    restart: unless-stopped
