@@ -3,6 +3,7 @@ name: Create and publish a Docker image
 on:
   push:
     branches: ['main']
+  pull_request:
 
 env:
   REGISTRY: ghcr.io
@@ -36,6 +37,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: ${{ github.ref == 'refs/heads/main' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
